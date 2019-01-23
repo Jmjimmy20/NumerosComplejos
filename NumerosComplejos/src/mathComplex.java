@@ -42,7 +42,17 @@ public class mathComplex {
     }
     
     
-    
+    public static List RestaComplejos(List tupla1,List tupla2){
+        List<Double> respuesta = new ArrayList<Double>();
+        double valorReal1 = (Double) tupla1.get(0);
+        double valorReal2 = (Double) tupla2.get(0);
+        respuesta.add(valorReal1-valorReal2);
+        double valorImaginario1 = (Double) tupla1.get(1);
+        double valorImaginario2 = (Double) tupla2.get(1);     
+        respuesta.add(valorImaginario1 - valorImaginario2);
+        System.out.println("El resultado de la resta es: " + respuesta.get(0).toString() + "+(" + respuesta.get(1).toString()+ ")i");
+        return respuesta;
+    }
     
     
 }

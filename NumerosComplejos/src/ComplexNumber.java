@@ -30,9 +30,9 @@ public class ComplexNumber {
         return respuesta;        
     }
     
-    public fase(){
-        
-    }
+//    public fase(){
+//        
+//    }
     
     public List Conjugado(){
         List<Double> respuesta = new ArrayList<Double>();
