@@ -42,6 +42,8 @@ public class ComplexNumber {
 //        
 //    }
     
+    
+    
     public ComplexNumber Conjugado(){
         double imaginarioN = imaginario * (-1);
         ComplexNumber NumeroCNuevo = new ComplexNumber(real, imaginarioN);

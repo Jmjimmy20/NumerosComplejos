@@ -73,5 +73,21 @@ public class mathComplex {
     }
     
     
+    public static ComplexNumber CartesianoAPolar(ComplexNumber tupla){
+        ComplexNumber numeroCNuevo;
+        double valorA = tupla.GetReal();
+        double valorB = tupla.Getimaginario();
+        double valorDivision = valorB/valorA;
+        double valorTeta = Math.atan(valorDivision);
+        valorA = Math.pow(valorA, 2);
+        valorB = Math.pow(valorB, 2);
+        double valorC = valorA + valorB;
+        double valorPfea = Math.sqrt(valorC);
+        numeroCNuevo = new ComplexNumber(valorPfea, valorTeta);
+        return numeroCNuevo;
+    }
+    
+    
+    
     
 }
