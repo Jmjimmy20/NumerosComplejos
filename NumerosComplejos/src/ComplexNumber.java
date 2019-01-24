@@ -22,6 +22,14 @@ public class ComplexNumber {
         imaginario = imaginario1;
     }
     
+    public double GetReal(){
+        return real;
+    }
+    
+    public double Getimaginario(){
+        return imaginario;
+    }
+    
     public float Modulus(){
         double a = Math.pow(real, 2);
         double b = Math.pow(imaginario, 2);
@@ -34,12 +42,10 @@ public class ComplexNumber {
 //        
 //    }
     
-    public List Conjugado(){
-        List<Double> respuesta = new ArrayList<Double>();
-        respuesta.add(real);
-        double negacionImaginario = imaginario*-1;
-        respuesta.add(negacionImaginario);
-        return respuesta;
+    public ComplexNumber Conjugado(){
+        double imaginarioN = imaginario * (-1);
+        ComplexNumber NumeroCNuevo = new ComplexNumber(real, imaginarioN);
+        return NumeroCNuevo;
     }
     
 }

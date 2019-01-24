@@ -15,44 +15,63 @@ public class mathComplex {
     
     
     
-    public static List SumaComplejos(List tupla1,List tupla2){
-        List<Double> respuesta = new ArrayList<Double>();
-        double valorReal1 = (Double) tupla1.get(0);
-        double valorReal2 = (Double) tupla2.get(0);
-        respuesta.add(valorReal1+valorReal2);
-        double valorImaginario1 = (Double) tupla1.get(1);
-        double valorImaginario2 = (Double) tupla2.get(1);     
-        respuesta.add(valorImaginario1+valorImaginario2);
-        System.out.println("El resultado de la suma es: " + respuesta.get(0).toString() + "+" + respuesta.get(1).toString()+ "i");
-        return respuesta;
+    public static ComplexNumber SumaComplejos(ComplexNumber tupla1,ComplexNumber tupla2){
+        ComplexNumber numeroCNuevo;
+        double valorReal1 = tupla1.GetReal();
+        double valorReal2 = tupla2.GetReal();
+        double realNuevo = valorReal1+valorReal2;
+        double valorImaginario1 = tupla1.Getimaginario();
+        double valorImaginario2 = tupla2.Getimaginario();     
+        double imaginarioNuevo = valorImaginario1+valorImaginario2;
+        numeroCNuevo = new ComplexNumber(realNuevo, imaginarioNuevo);
+        System.out.println("El resultado de la suma es: " + realNuevo + "+(" + imaginarioNuevo + ")i");
+        return numeroCNuevo;
     }
     
     
-    public static void ProductoComplejos (List tupla1,List tupla2){
-        List<Double> respuesta = new ArrayList<Double>();
-        double valorReal1 = (Double) tupla1.get(0);
-        double valorReal2 = (Double) tupla2.get(0);
-        double valorImaginario1 = (Double) tupla1.get(1);
-        double valorImaginario2 = (Double) tupla2.get(1); 
+    public static ComplexNumber ProductoComplejos (ComplexNumber tupla1,ComplexNumber tupla2){
+        ComplexNumber numeroCNuevo;
+        double valorReal1 = tupla1.GetReal();
+        double valorReal2 = tupla2.GetReal();
+        double valorImaginario1 = tupla1.Getimaginario();
+        double valorImaginario2 = tupla2.Getimaginario(); 
         double parteReal = (valorReal1*valorReal2)+(valorImaginario1*valorImaginario2*-1);
         double parteImaginaria = (valorImaginario1*valorReal1)+(valorReal1*valorImaginario2);
-        respuesta.add(parteReal);
-        respuesta.add(parteImaginaria);
-        System.out.println("El resultado del producto es: " + respuesta.get(0).toString() + "+(" + respuesta.get(1).toString()+ ")i");
+        numeroCNuevo = new ComplexNumber(parteReal, parteImaginaria);
+        System.out.println("El resultado del producto es: " + parteReal + "+(" + parteImaginaria + ")i");
+        return numeroCNuevo;
     }
     
     
-    public static List RestaComplejos(List tupla1,List tupla2){
-        List<Double> respuesta = new ArrayList<Double>();
-        double valorReal1 = (Double) tupla1.get(0);
-        double valorReal2 = (Double) tupla2.get(0);
-        respuesta.add(valorReal1-valorReal2);
-        double valorImaginario1 = (Double) tupla1.get(1);
-        double valorImaginario2 = (Double) tupla2.get(1);     
-        respuesta.add(valorImaginario1 - valorImaginario2);
-        System.out.println("El resultado de la resta es: " + respuesta.get(0).toString() + "+(" + respuesta.get(1).toString()+ ")i");
-        return respuesta;
+    public static ComplexNumber RestaComplejos(ComplexNumber tupla1,ComplexNumber tupla2){
+        ComplexNumber numeroCNuevo;
+        double valorReal1 = tupla1.GetReal();
+        double valorReal2 = tupla2.GetReal();
+        double realNuevo = valorReal1-valorReal2;
+        double valorImaginario1 = tupla1.Getimaginario();
+        double valorImaginario2 = tupla2.Getimaginario();     
+        double imaginarioNuevo = valorImaginario1-valorImaginario2;
+        numeroCNuevo = new ComplexNumber(realNuevo, imaginarioNuevo);
+        System.out.println("El resultado de la suma es: " + realNuevo + "+(" + imaginarioNuevo + ")i");
+        return numeroCNuevo;
     }
+    
+    public static ComplexNumber DivisionCompleja(ComplexNumber tupla1,ComplexNumber tupla2){
+        ComplexNumber numeroCNuevo;
+        double valorReal1 = tupla1.GetReal();
+        double valorReal2 = tupla2.GetReal();
+        double valorImaginario1 = tupla1.Getimaginario();
+        double valorImaginario2 = tupla2.Getimaginario(); 
+        double xNumerador = (valorReal1*valorReal2)+(valorImaginario1*valorImaginario2);
+        double yNumerador = (valorReal2*valorImaginario1) - (valorReal1*valorImaginario2);
+        double Denominador = Math.pow(valorReal2, 2) + Math.pow(valorImaginario2, 2);
+        double valorReal = xNumerador/Denominador;
+        double valorImaginario = yNumerador/Denominador;
+        numeroCNuevo = new ComplexNumber(valorReal, valorImaginario);
+        System.out.println("El resultado de la division es: " + valorReal + "+(" + valorImaginario + ")i");
+        return numeroCNuevo;
+    }
+    
     
     
 }
