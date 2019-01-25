@@ -1,7 +1,3 @@
-
-import java.util.ArrayList;
-import java.util.List;
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -13,8 +9,8 @@ import java.util.List;
  * @author 2124203
  */
 public class ComplexNumber {
-    double real;
-    double imaginario;
+    private double real;
+    private double imaginario;
     
     
     public ComplexNumber(double real1, double imaginario1){
@@ -38,9 +34,11 @@ public class ComplexNumber {
         return respuesta;        
     }
     
-//    public fase(){
-//        
-//    }
+    public double fase(){
+        double division = imaginario/real;
+        double tangenteH = Math.atan(division);
+        return tangenteH;
+    }
     
     
     

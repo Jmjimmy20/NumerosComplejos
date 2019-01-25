@@ -88,6 +88,31 @@ public class mathComplex {
     }
     
     
+    public static ComplexNumber PolarACartesiano(ComplexNumber tupla){
+        ComplexNumber numeroCNuevo;
+        double valorTeta = tupla.Getimaginario();
+        double valorPfea = tupla.GetReal();
+        double cosTeta= Math.cos(valorTeta);
+        double sinTeta= Math.sin(valorTeta);
+        double valorA = valorPfea * cosTeta;
+        double valorB = valorPfea * sinTeta;
+        numeroCNuevo = new ComplexNumber(valorA, valorB);
+        return numeroCNuevo;
+    }
+    
+    
+    public static boolean igualdadComplejos (ComplexNumber tupla1,ComplexNumber tupla2){
+        double valorA1 = tupla1.GetReal();
+        double valorB1 = tupla1.Getimaginario();
+        double valorA2 = tupla2.GetReal();
+        double valorB2 = tupla2.Getimaginario();
+        if (valorA2 == valorA1 && valorB1 == valorB2){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
     
     
 }
