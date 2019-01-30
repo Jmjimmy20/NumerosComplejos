@@ -33,7 +33,7 @@ public class mathComplex {
         double valorImaginario1 = tupla1.Getimaginario();
         double valorImaginario2 = tupla2.Getimaginario(); 
         double parteReal = (valorReal1*valorReal2)+(valorImaginario1*valorImaginario2*-1);
-        double parteImaginaria = (valorImaginario1*valorReal1)+(valorReal1*valorImaginario2);
+        double parteImaginaria = (valorImaginario1*valorReal2)+(valorReal1*valorImaginario2);
         numeroCNuevo = new ComplexNumber(parteReal, parteImaginaria);
         System.out.println("El resultado del producto es: " + parteReal + "+(" + parteImaginaria + ")i");
         return numeroCNuevo;
@@ -49,7 +49,7 @@ public class mathComplex {
         double valorImaginario2 = tupla2.Getimaginario();     
         double imaginarioNuevo = valorImaginario1-valorImaginario2;
         numeroCNuevo = new ComplexNumber(realNuevo, imaginarioNuevo);
-        System.out.println("El resultado de la suma es: " + realNuevo + "+(" + imaginarioNuevo + ")i");
+        System.out.println("El resultado de la resta es: " + realNuevo + "+(" + imaginarioNuevo + ")i");
         return numeroCNuevo;
     }
     
@@ -80,6 +80,8 @@ public class mathComplex {
         valorB = Math.pow(valorB, 2);
         double valorC = valorA + valorB;
         double valorPfea = Math.sqrt(valorC);
+        System.out.println(valorPfea);
+        System.out.println(valorTeta);
         numeroCNuevo = new ComplexNumber(valorPfea, valorTeta);
         return numeroCNuevo;
     }
@@ -93,6 +95,8 @@ public class mathComplex {
         double sinTeta= Math.sin(valorTeta);
         double valorA = valorPfea * cosTeta;
         double valorB = valorPfea * sinTeta;
+        System.out.println(valorA);
+        System.out.println(valorB);
         numeroCNuevo = new ComplexNumber(valorA, valorB);
         return numeroCNuevo;
     }

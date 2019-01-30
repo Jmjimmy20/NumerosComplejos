@@ -26,11 +26,11 @@ public class ComplexNumber {
         return imaginario;
     }
     
-    public float Modulus(){
+    public double Modulus(){
         double a = Math.pow(real, 2);
         double b = Math.pow(imaginario, 2);
         double suma = a+b;
-        float respuesta = (float) Math.sqrt(suma);
+        double respuesta =  Math.sqrt(suma);
         return respuesta;        
     }
     
