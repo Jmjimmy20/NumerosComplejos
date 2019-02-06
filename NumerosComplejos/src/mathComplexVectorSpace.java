@@ -10,12 +10,12 @@
  */
 public class mathComplexVectorSpace {
     
-    public static ComplexVectorSpace SumaMatricesVectores(ComplexVectorSpace matriz1, ComplexVectorSpace matriz2){
+    public static VectorFilasColumna SumaMatricesVectores(VectorFilasColumna matriz1, VectorFilasColumna matriz2){
         
         int size1 = matriz1.GetSize();
         int size2 = matriz2.GetSize();
         if (size1 == size2){
-            ComplexVectorSpace listaNueva = new ComplexVectorSpace(size1);
+            VectorFilasColumna listaNueva = new VectorFilasColumna(size1);
             for(int i = 0; i < size1; i++){
                 listaNueva.AddValue(mathComplex.SumaComplejos(matriz1.GetPosition(i), matriz2.GetPosition(i)));
             }
@@ -29,9 +29,9 @@ public class mathComplexVectorSpace {
     }  
     
     
-    public static ComplexVectorSpace MultiplicacionScalarMatriz(ComplexNumber complejo1, ComplexVectorSpace lista1){
+    public static VectorFilasColumna MultiplicacionScalarMatriz(ComplexNumber complejo1, VectorFilasColumna lista1){
         int size = lista1.GetSize();
-        ComplexVectorSpace listaN = new ComplexVectorSpace(size);
+        VectorFilasColumna listaN = new VectorFilasColumna(size);
         for(int i = 0; i < size; i++){
            ComplexNumber numeroN = mathComplex.ProductoComplejos(complejo1, lista1.GetPosition(i));
            listaN.AddValue(numeroN);
@@ -39,5 +39,16 @@ public class mathComplexVectorSpace {
         return listaN;
     }
     
+    
+    public static boolean IgualdadVectores(VectorFilasColumna matriz1, VectorFilasColumna matriz2){
+        int tamanio = matriz1.GetSize();
+        boolean iguales = true;
+        for (int i = 0; i < tamanio; i++){
+            if(!mathComplex.igualdadComplejos(matriz1.GetPosition(i), matriz2.GetPosition(i))){
+                iguales = false;
+            }
+        }
+        return iguales;
+    }
     
 }

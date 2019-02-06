@@ -17,9 +17,11 @@ public class mathComplex {
         double valorReal1 = tupla1.GetReal();
         double valorReal2 = tupla2.GetReal();
         double realNuevo = valorReal1+valorReal2;
+        realNuevo = Math.round(realNuevo * 100) / 100d;
         double valorImaginario1 = tupla1.Getimaginario();
         double valorImaginario2 = tupla2.Getimaginario();     
         double imaginarioNuevo = valorImaginario1+valorImaginario2;
+        imaginarioNuevo = Math.round(imaginarioNuevo * 100) / 100d;
         numeroCNuevo = new ComplexNumber(realNuevo, imaginarioNuevo);
         System.out.println("El resultado de la suma es: " + realNuevo + "+(" + imaginarioNuevo + ")i");
         return numeroCNuevo;
@@ -45,9 +47,11 @@ public class mathComplex {
         double valorReal1 = tupla1.GetReal();
         double valorReal2 = tupla2.GetReal();
         double realNuevo = valorReal1-valorReal2;
+        realNuevo = Math.round(realNuevo * 100) / 100d;
         double valorImaginario1 = tupla1.Getimaginario();
         double valorImaginario2 = tupla2.Getimaginario();     
         double imaginarioNuevo = valorImaginario1-valorImaginario2;
+        imaginarioNuevo = Math.round(imaginarioNuevo * 100) / 100d;
         numeroCNuevo = new ComplexNumber(realNuevo, imaginarioNuevo);
         System.out.println("El resultado de la resta es: " + realNuevo + "+(" + imaginarioNuevo + ")i");
         return numeroCNuevo;
