@@ -10,7 +10,7 @@
  */
 public class mathComplexVectorSpace {
     
-    public static VectorFilasColumna SumaMatricesVectores(VectorFilasColumna matriz1, VectorFilasColumna matriz2){
+    public static VectorFilasColumna SumaMatricesFilasColumna(VectorFilasColumna matriz1, VectorFilasColumna matriz2){
         
         int size1 = matriz1.GetSize();
         int size2 = matriz2.GetSize();

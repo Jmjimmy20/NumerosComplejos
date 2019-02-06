@@ -43,7 +43,7 @@ public class TestVectorFilasColumna {
         vector2.AddValue(valor3);
         valor4 = new ComplexNumber(0, -4);
         vector2.AddValue(valor4);
-        VectorFilasColumna valorRespuesta = mathComplexVectorSpace.SumaMatricesVectores(vector1, vector2);
+        VectorFilasColumna valorRespuesta = mathComplexVectorSpace.SumaMatricesFilasColumna(vector1, vector2);
         boolean flag = mathComplexVectorSpace.IgualdadVectores(valorRespuesta, valorEsperado);
         assertEquals(flagEsperada, flag);
     }
