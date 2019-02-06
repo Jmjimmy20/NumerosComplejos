@@ -10,10 +10,21 @@
  */
 public class MatrizFilasColumnas {
     //Atributos 
+    int sizeM;
+    int sizeN;
+    int conteoAnadidos;
+    ComplexNumber [][] matriz;
     
     
-    public MatrizFilasColumnas(int sizeM, int sizeN){
+    public MatrizFilasColumnas(int tamM, int tamN){
+        sizeM = tamM;
+        sizeN = tamN;
+        matriz = new ComplexNumber[sizeM][sizeN];
+    }
     
+    
+    public void AddInPosition(int posX, int posY, ComplexNumber valor){
+        
     }
     
 }
