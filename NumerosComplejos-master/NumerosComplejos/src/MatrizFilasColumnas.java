@@ -23,8 +23,12 @@ public class MatrizFilasColumnas {
     }
     
     
-    public void AddInPosition(int posX, int posY, ComplexNumber valor){
-        
+    public void AddInPosition(int posFila, int posColumna, ComplexNumber valor){
+        matriz[posFila][posColumna] = valor;
+    }
+    
+    public ComplexNumber GetPosition(int posFila, int posColumna){
+        return matriz[posFila][posColumna];
     }
     
 }
