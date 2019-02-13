@@ -122,7 +122,7 @@ public class TestMatrizFIlasColumnas {
         ComplexNumber valor8 = new ComplexNumber(15, 22);
         valorEsperado.AddInPosition(2,1,valor8);
         ComplexNumber valor9 = new ComplexNumber(20, -22);
-        valorEsperado.AddInPosition(1,0,valor9);
+        valorEsperado.AddInPosition(2,2,valor9);
         MatrizFilasColumnas matriz1 = new MatrizFilasColumnas(3,3);
         valor1 = new ComplexNumber(3, 2);
         matriz1.AddInPosition(0,0,valor1);
@@ -141,7 +141,7 @@ public class TestMatrizFIlasColumnas {
         valor8 = new ComplexNumber(0, 0);
         matriz1.AddInPosition(2,1,valor8);
         valor9 = new ComplexNumber(4, 0);
-        matriz1.AddInPosition(1,0,valor9);
+        matriz1.AddInPosition(2,2,valor9);
         MatrizFilasColumnas matriz2 = new MatrizFilasColumnas(3,3);
         valor1 = new ComplexNumber(5, 0);
         matriz2.AddInPosition(0,0,valor1);
@@ -160,11 +160,63 @@ public class TestMatrizFIlasColumnas {
         valor8 = new ComplexNumber(2, 7);
         matriz2.AddInPosition(2,1,valor8);
         valor9 = new ComplexNumber(0, 0);
-        matriz2.AddInPosition(1,0,valor9);
+        matriz2.AddInPosition(2,2,valor9);
         MatrizFilasColumnas matrizFinal = mathMatriz.multiplicacionMatricial(matriz1, matriz2);
         boolean flag = mathMatriz.IgualMatricial(matrizFinal, valorEsperado);
         assertEquals(flagEsperada, flag);
     }
     
+    @Test
+    public void testMultiplicacionVectorMatriz() {
+        boolean flagEsperada = true;
+        VectorFilasColumna valorEsperado = new VectorFilasColumna(2);
+        ComplexNumber valor1 = new ComplexNumber(12, 12);
+        valorEsperado.AddValue(valor1);
+        ComplexNumber valor2 = new ComplexNumber(16, -8);
+        valorEsperado.AddValue(valor2);
+        VectorFilasColumna vector1 = new VectorFilasColumna(2);
+        valor1 = new ComplexNumber(4, 0);
+        vector1.AddValue(valor1);
+        valor2  =  new ComplexNumber(4, -2);
+        vector1.AddValue(valor2);
+        MatrizFilasColumnas matriz1 = new MatrizFilasColumnas(2,2);
+        valor1 = new ComplexNumber(-2, 3);
+        matriz1.AddInPosition(0,0,valor1);
+        valor2 = new ComplexNumber(4, -2);
+        matriz1.AddInPosition(0,1,valor2);
+        ComplexNumber valor3 = new ComplexNumber(4, 2);
+        matriz1.AddInPosition(1,0,valor3);
+        ComplexNumber valor4 = new ComplexNumber(0, 0);
+        matriz1.AddInPosition(1,1,valor4);
+        VectorFilasColumna matrizFinal = mathMatriz.MultiplicacionVectorMatriz(vector1, matriz1);
+        boolean flag = mathComplexVectorSpace.IgualdadVectores(matrizFinal, valorEsperado);
+        assertEquals(flagEsperada, flag);
+    }
     
+    @Test
+    public void testMultiplicacionMatrizVector() {
+        boolean flagEsperada = true;
+        VectorFilasColumna valorEsperado = new VectorFilasColumna(2);
+        ComplexNumber valor1 = new ComplexNumber(4, -4);
+        valorEsperado.AddValue(valor1);
+        ComplexNumber valor2 = new ComplexNumber(16, 8);
+        valorEsperado.AddValue(valor2);
+        VectorFilasColumna vector1 = new VectorFilasColumna(2);
+        valor1 = new ComplexNumber(4, 0);
+        vector1.AddValue(valor1);
+        valor2  =  new ComplexNumber(4, -2);
+        vector1.AddValue(valor2);
+        MatrizFilasColumnas matriz1 = new MatrizFilasColumnas(2,2);
+        valor1 = new ComplexNumber(-2, 3);
+        matriz1.AddInPosition(0,0,valor1);
+        valor2 = new ComplexNumber(4, -2);
+        matriz1.AddInPosition(0,1,valor2);
+        ComplexNumber valor3 = new ComplexNumber(4, 2);
+        matriz1.AddInPosition(1,0,valor3);
+        ComplexNumber valor4 = new ComplexNumber(0, 0);
+        matriz1.AddInPosition(1,1,valor4);
+        VectorFilasColumna matrizFinal = mathMatriz.MultiplicacionMatrizVector(matriz1, vector1);
+        boolean flag = mathComplexVectorSpace.IgualdadVectores(matrizFinal, valorEsperado);
+        assertEquals(flagEsperada, flag);
+    }
 }

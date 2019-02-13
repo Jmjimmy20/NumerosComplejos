@@ -1,3 +1,6 @@
+
+import com.sun.org.apache.bcel.internal.generic.AALOAD;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -48,30 +51,11 @@ public class mathMatriz {
     
     public static MatrizFilasColumnas multiplicacionMatricial(MatrizFilasColumnas matriz1, MatrizFilasColumnas matriz2){
         if ((matriz1.sizeFilas == matriz2.sizeFilas) && (matriz1.sizeColumnas == matriz2.sizeColumnas)){
-            int contador = 1;
-            ComplexNumber complejoN; 
-            ComplexNumber complejoSumador;
             MatrizFilasColumnas matrizN = new MatrizFilasColumnas(matriz1.sizeFilas, matriz1.sizeColumnas);
-            for(int i = 0; i < matriz1.sizeFilas; i ++){
+            System.out.println("mathMatriz.multiplicacionMatricial()" + matriz1.sizeFilas);
+            for(int i = 0; i < matriz1.sizeFilas; i++){
                 System.out.println(i);
-                complejoSumador = new ComplexNumber(0, 0);
-                for(int o = 0; o < matriz1.sizeColumnas; o ++){
-                    complejoN = mathComplex.ProductoComplejos(matriz1.GetPosition(i, o), matriz2.GetPosition(o, (contador-1)));
-                    complejoSumador = mathComplex.SumaComplejos(complejoN, complejoSumador);
-                }
-                if (contador != matriz1.sizeColumnas){
-                    matrizN.AddInPosition(i, contador, complejoSumador);
-                    contador++;
-                    System.out.println(contador);
-                    i-=1;
-                }
-                else{
-                    matrizN.AddInPosition(i, contador, complejoSumador);
-                    contador = 1;
-                    System.out.println(i);
-                }
-                
-                
+                MultiplicacionMatrizVector(i,matriz1,matriz2,matrizN);
             }
             return matrizN;
         }
@@ -81,7 +65,50 @@ public class mathMatriz {
         }
     }
     
+    private static void MultiplicacionMatrizVector(int i, MatrizFilasColumnas matriz1, MatrizFilasColumnas matriz2, MatrizFilasColumnas N){
+        ComplexNumber complejoN; 
+        ComplexNumber complejoSuma;
+        for(int a = 0; a < matriz2.sizeFilas; a++){
+            complejoSuma = new ComplexNumber(0, 0);
+            for(int b = 0; b < matriz2.sizeColumnas; b++){
+                complejoN = mathComplex.ProductoComplejos(matriz1.GetPosition(i, b), matriz2.GetPosition(b, a));
+                complejoSuma = mathComplex.SumaComplejos(complejoN, complejoSuma);
+            }
+            N.AddInPosition(i, a, complejoSuma);
+        }
+        
+    }
     
+    
+    public static VectorFilasColumna MultiplicacionVectorMatriz(VectorFilasColumna vector, MatrizFilasColumnas matriz){
+        VectorFilasColumna vectorN = new VectorFilasColumna(matriz.sizeColumnas);
+        ComplexNumber complejoN;
+        ComplexNumber complejoSuma;
+        for(int i = 0; i < matriz.sizeColumnas; i++){
+            complejoSuma = new ComplexNumber(0, 0);
+            for(int o = 0; o < matriz.sizeFilas; o++){
+                complejoN = mathComplex.ProductoComplejos(vector.GetPosition(o), matriz.GetPosition(o, i));
+                complejoSuma = mathComplex.SumaComplejos(complejoN, complejoSuma);
+            }
+            vectorN.AddValue(complejoSuma);
+        }
+        return  vectorN;
+    }
+    
+    public static VectorFilasColumna MultiplicacionMatrizVector(MatrizFilasColumnas matriz, VectorFilasColumna vector){
+        VectorFilasColumna vectorN = new VectorFilasColumna(matriz.sizeFilas);
+        ComplexNumber complejoN;
+        ComplexNumber complejoSuma;
+        for(int i = 0; i < matriz.sizeFilas; i++){
+            complejoSuma = new ComplexNumber(0, 0);
+            for(int o = 0; o < matriz.sizeColumnas; o++){
+                complejoN = mathComplex.ProductoComplejos(vector.GetPosition(o), matriz.GetPosition(i, o));
+                complejoSuma = mathComplex.SumaComplejos(complejoN, complejoSuma);
+            }
+            vectorN.AddValue(complejoSuma);
+        }
+        return  vectorN;
+    }
     
     
     public static boolean IgualMatricial(MatrizFilasColumnas matriz1, MatrizFilasColumnas matriz2){

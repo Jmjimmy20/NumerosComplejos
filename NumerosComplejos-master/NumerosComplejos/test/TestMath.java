@@ -44,9 +44,11 @@ public class TestMath {
     public void testCalcularMultiplicacion(){
         boolean flagEsperada = true;
         ComplexNumber valorEsperado = new ComplexNumber(7, 4);
-        ComplexNumber valor1 = new ComplexNumber(3, -2);
-        ComplexNumber valor2 = new ComplexNumber(1, 2);
+        ComplexNumber valor1 = new ComplexNumber(4, 0);
+        ComplexNumber valor2 = new ComplexNumber(4, 2);
+        System.out.println("hola 2");
         ComplexNumber valorRespuesta = mathComplex.ProductoComplejos(valor1, valor2);
+        System.out.println("hola 1");
         boolean flag = mathComplex.igualdadComplejos(valorEsperado, valorRespuesta);
         assertEquals(flagEsperada, flag);
     }
