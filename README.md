@@ -11,7 +11,7 @@ En esta librería encontraran distintas operaciones con números complejos y a s
 
 Para la facilidad de la realización de las pruebas se hicieron varios archivos de prueba en los cuales cada uno tiene un nombre en el cual hace referencia cual cual código ara las pruebas, para realizaras se abrirá la carpeta de pruebas  dentro de ella abra solo una carpeta la cual abriremos y encontraremos las distintas pruebas
 
-![](Images/Imagen1.png)
+![](Images/Imagen1.PNG)
 
 
 # Explicación de las pruebas
@@ -21,6 +21,6 @@ En este espacio se detallaran cada una de las pruebas que comprenden cada uno de
  1. **Suma de complejos**
 	  En este prueba se muestra como el codigo acepta dos numeros complejos y saca el resultado de la suma de estos dos.
     
-	![](Images/Imagen2.png)
+	![](Images/Imagen2.PNG)
 
 
