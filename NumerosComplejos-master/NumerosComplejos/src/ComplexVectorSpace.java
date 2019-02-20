@@ -23,7 +23,7 @@ public class ComplexVectorSpace {
     }
     
     public void AddValue(ComplexNumber CompNew){
-        if(size < ListVector.size()){
+        if(size > ListVector.size()){
             ListVector.add(CompNew);
         }
         

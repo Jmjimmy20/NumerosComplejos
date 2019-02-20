@@ -51,4 +51,78 @@ public class mathComplexVectorSpace {
         return iguales;
     }
     
+    
+    public static ComplexNumber InnerProduct(ComplexVectorSpace vector1, ComplexVectorSpace vector2){
+        ComplexNumber n = new ComplexNumber(0,0);
+        for(int i = 0; i < vector1.GetSize(); i++){
+            ComplexNumber ComplejoN = mathComplex.ProductoComplejos(vector1.GetPosition(i).Conjugado(), vector2.GetPosition(i));
+            n = mathComplex.SumaComplejos(n, ComplejoN);
+            System.out.println(n.GetReal()+" "+n.Getimaginario());
+        }
+        return n;
+    }
+    
+    public static double NormComplejos(ComplexVectorSpace vector1){
+        double numeroN = 0;
+        for(int i = 0; i < vector1.GetSize(); i++){
+            ComplexNumber ComplejoN = mathComplex.ProductoComplejos(vector1.GetPosition(i).Conjugado(), vector1.GetPosition(i));
+            numeroN = ComplejoN.GetReal() + numeroN;
+        }
+        return (double)Math.sqrt(numeroN);
+    }
+    
+    public static double DistanceComplejos(ComplexVectorSpace vector1, ComplexVectorSpace vector2){
+        if (vector1.GetSize() == vector2.GetSize()){
+            ComplexVectorSpace vectorN = new ComplexVectorSpace(vector1.GetSize());
+            for(int i = 0; i < vector1.GetSize(); i++){
+                ComplexNumber numeroN = mathComplex.RestaComplejos(vector1.GetPosition(i), vector2.GetPosition(i));
+                vectorN.AddValue(numeroN);
+            }
+            return NormComplejos(vectorN);
+        }
+        else{
+            System.out.println("El tamaño de alguno de los dos vectores es mayor al otro, el valor de respuesta sera cero");
+            return 0;
+        }
+        
+    }
+    
+    public static boolean IsHermitian(MatrizFilasColumnas matriz1){
+        if (matriz1.sizeFilas == matriz1.sizeColumnas){
+            MatrizFilasColumnas matrizN = new MatrizFilasColumnas(matriz1.sizeFilas, matriz1.sizeColumnas);
+            MatrizFilasColumnas matrizFinal = new MatrizFilasColumnas(matriz1.sizeFilas, matriz1.sizeColumnas);
+            for(int i = 0; i < matriz1.sizeFilas; i++){
+                for(int a = 0; a < matriz1.sizeColumnas; a++){
+                    matrizN.AddInPosition(i, a, matriz1.GetPosition(i, a).Conjugado());
+                    matrizFinal.AddInPosition(a, i, matrizN.GetPosition(i, a));
+                }
+            }
+            return IgualdadMatricial(matriz1, matrizFinal);
+        }
+        else{
+            return false;
+        }
+    }
+    
+    public static boolean IgualdadMatricial(MatrizFilasColumnas matriz1,MatrizFilasColumnas matriz2){
+        boolean valorRetorno = true;
+        if ((matriz1.sizeColumnas != matriz2.sizeColumnas) || (matriz1.sizeFilas != matriz2.sizeFilas)){
+            return false;
+        }
+        else{
+            for(int i = 0; i < matriz1.sizeFilas; i++){
+                for (int a = 0; a < matriz1.sizeColumnas; a++){
+                    if(!mathComplex.igualdadComplejos(matriz1.GetPosition(i, a), matriz2.GetPosition(i, a))){
+                        return false;
+                    }
+                }
+            }
+            
+            return valorRetorno;
+        }
+        
+    }
+    
+    
+            
 }
