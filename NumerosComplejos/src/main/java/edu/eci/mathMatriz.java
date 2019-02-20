@@ -52,7 +52,6 @@ public class mathMatriz {
         if ((matriz1.sizeFilas == matriz2.sizeFilas) && (matriz1.sizeColumnas == matriz2.sizeColumnas)){
             MatrizFilasColumnas matrizN = new MatrizFilasColumnas(matriz1.sizeFilas, matriz1.sizeColumnas);
             for(int i = 0; i < matriz1.sizeFilas; i++){
-                System.out.println(i);
                 MultiplicacionMatrizVector(i,matriz1,matriz2,matrizN);
             }
             return matrizN;
@@ -114,7 +113,6 @@ public class mathMatriz {
         MatrizFilasColumnas matrizN = new MatrizFilasColumnas((matriz1.sizeFilas * matriz2.sizeFilas), (matriz1.sizeColumnas * matriz2.sizeColumnas));
         for (int i = 0; i < matriz1.sizeFilas; i ++){
             for(int a = 0; a < matriz1.sizeColumnas; a++){
-                System.out.println(i+" dasdadasd puto "+a);
                 AnadirPosicion(matriz1.GetPosition(i, a), contadorFilas, contadorColumnas, matrizN,matriz2);
                 contadorColumnas += (matriz2.sizeColumnas);
             }
@@ -127,9 +125,7 @@ public class mathMatriz {
     private static void AnadirPosicion(ComplexNumber valor1, int Contadorfilas, int contadorColumna, MatrizFilasColumnas matrizN, MatrizFilasColumnas matriz2){
         for(int i = 0; i < matriz2.sizeFilas; i++){
             for(int a = 0; a < matriz2.sizeColumnas; a++){
-                System.out.println((i+Contadorfilas) + " asasd" +(a+contadorColumna));
                 matrizN.AddInPosition(i+Contadorfilas, a+contadorColumna, mathComplex.ProductoComplejos(valor1, matriz2.GetPosition(i, a)));
-                System.out.println("Sali");
             }
         }
         
