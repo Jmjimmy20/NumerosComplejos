@@ -25,7 +25,10 @@ En este espacio se detallaran cada una de las pruebas que comprenden cada uno de
 
  2. **Resta de complejos**
 	  En este prueba se muestra como el código acepta dos números complejos y saca el resultado de la resta de 					estos dos.
+	  
 	![](Images/Imagen3.PNG) 
+	
  3.  **Multiplicación de complejos**
 	En este prueba se muestra como el código acepta dos números complejos y saca el resultado de la multiplicación de estos dos.
+	
 	![](Images/Imagen4.PNG)
