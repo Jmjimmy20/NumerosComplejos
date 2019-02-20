@@ -120,8 +120,9 @@ public class TestMathComplexVectorSpace {
         ComplexNumber valor9 = new ComplexNumber(-2.1, 0);
         matriz1.AddInPosition(2,2,valor9);        
         boolean flag = mathComplexVectorSpace.IsHermitian(matriz1);
-        
         assertEquals(flagEsperada, flag);
      }  
+     
+    
      
 }

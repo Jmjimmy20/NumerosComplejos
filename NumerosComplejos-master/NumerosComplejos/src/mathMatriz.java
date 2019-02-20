@@ -1,5 +1,4 @@
 
-import com.sun.org.apache.bcel.internal.generic.AALOAD;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -52,7 +51,6 @@ public class mathMatriz {
     public static MatrizFilasColumnas multiplicacionMatricial(MatrizFilasColumnas matriz1, MatrizFilasColumnas matriz2){
         if ((matriz1.sizeFilas == matriz2.sizeFilas) && (matriz1.sizeColumnas == matriz2.sizeColumnas)){
             MatrizFilasColumnas matrizN = new MatrizFilasColumnas(matriz1.sizeFilas, matriz1.sizeColumnas);
-            System.out.println("mathMatriz.multiplicacionMatricial()" + matriz1.sizeFilas);
             for(int i = 0; i < matriz1.sizeFilas; i++){
                 System.out.println(i);
                 MultiplicacionMatrizVector(i,matriz1,matriz2,matrizN);
@@ -108,6 +106,34 @@ public class mathMatriz {
             vectorN.AddValue(complejoSuma);
         }
         return  vectorN;
+    }
+    
+    public static MatrizFilasColumnas ProductoTensor(MatrizFilasColumnas matriz1, MatrizFilasColumnas matriz2){
+        int contadorFilas = 0;
+        int contadorColumnas = 0;
+        MatrizFilasColumnas matrizN = new MatrizFilasColumnas((matriz1.sizeFilas * matriz2.sizeFilas), (matriz1.sizeColumnas * matriz2.sizeColumnas));
+        for (int i = 0; i < matriz1.sizeFilas; i ++){
+            for(int a = 0; a < matriz1.sizeColumnas; a++){
+                System.out.println(i+" dasdadasd puto "+a);
+                AnadirPosicion(matriz1.GetPosition(i, a), contadorFilas, contadorColumnas, matrizN,matriz2);
+                contadorColumnas += (matriz2.sizeColumnas);
+            }
+            contadorColumnas = 0;
+            contadorFilas += matriz2.sizeFilas;
+        }
+        return matrizN;
+    }
+    
+    private static void AnadirPosicion(ComplexNumber valor1, int Contadorfilas, int contadorColumna, MatrizFilasColumnas matrizN, MatrizFilasColumnas matriz2){
+        for(int i = 0; i < matriz2.sizeFilas; i++){
+            for(int a = 0; a < matriz2.sizeColumnas; a++){
+                System.out.println((i+Contadorfilas) + " asasd" +(a+contadorColumna));
+                matrizN.AddInPosition(i+Contadorfilas, a+contadorColumna, mathComplex.ProductoComplejos(valor1, matriz2.GetPosition(i, a)));
+                System.out.println("Sali");
+            }
+        }
+        
+        
     }
     
     

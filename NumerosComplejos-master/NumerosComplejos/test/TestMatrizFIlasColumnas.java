@@ -219,4 +219,61 @@ public class TestMatrizFIlasColumnas {
         boolean flag = mathComplexVectorSpace.IgualdadVectores(matrizFinal, valorEsperado);
         assertEquals(flagEsperada, flag);
     }
+    
+    @Test
+    public void testProductoTensor() {
+        boolean flagEsperada = true;
+        MatrizFilasColumnas valorEsperado = new MatrizFilasColumnas(6,4);
+        ComplexNumber valor1 = new ComplexNumber(-3, 0);
+        valorEsperado.AddInPosition(0,0,valor1);
+        valorEsperado.AddInPosition(0,1,valor1);
+        valorEsperado.AddInPosition(0,2,valor1);
+        valorEsperado.AddInPosition(0,3,valor1);
+        ComplexNumber valor2 = new ComplexNumber(-4, 0);
+        valorEsperado.AddInPosition(1,0,valor2);
+        valorEsperado.AddInPosition(1,1,valor2);
+        valorEsperado.AddInPosition(1,2,valor2);
+        valorEsperado.AddInPosition(1,3,valor2);
+        ComplexNumber valor3 = new ComplexNumber(-7, 0);
+        valorEsperado.AddInPosition(2,0,valor3);
+        valorEsperado.AddInPosition(2,1,valor3);
+        valorEsperado.AddInPosition(2,2,valor3);
+        valorEsperado.AddInPosition(2,3,valor3);
+        ComplexNumber valor4 = new ComplexNumber(6, 0);
+        valorEsperado.AddInPosition(3,0,valor4);
+        valorEsperado.AddInPosition(3,1,valor4);
+        valorEsperado.AddInPosition(3,2,valor4);
+        valorEsperado.AddInPosition(3,3,valor4);
+        ComplexNumber valor5 = new ComplexNumber(8, 0);
+        valorEsperado.AddInPosition(4,0,valor5);
+        valorEsperado.AddInPosition(4,1,valor5);
+        valorEsperado.AddInPosition(4,2,valor5);
+        valorEsperado.AddInPosition(4,3,valor5);
+        ComplexNumber valor6 = new ComplexNumber(14, 0);
+        valorEsperado.AddInPosition(5,0,valor6);
+        valorEsperado.AddInPosition(5,1,valor6);
+        valorEsperado.AddInPosition(5,2,valor6);
+        valorEsperado.AddInPosition(5,3,valor6);
+        MatrizFilasColumnas matriz1 = new MatrizFilasColumnas(2,2);
+        valor1 = new ComplexNumber(-1, 0);
+        matriz1.AddInPosition(0,0,valor1);
+        matriz1.AddInPosition(0,1,valor1);
+        valor2 = new ComplexNumber(2, 0);
+        matriz1.AddInPosition(1,0,valor2);
+        matriz1.AddInPosition(1,1,valor2);
+        MatrizFilasColumnas matriz2 = new MatrizFilasColumnas(3,2);
+        valor1 = new ComplexNumber(3, 0);
+        matriz2.AddInPosition(0,0,valor1);
+        matriz2.AddInPosition(0,1,valor1);
+        valor2 = new ComplexNumber(4, 0);
+        matriz2.AddInPosition(1,0,valor2);
+        matriz2.AddInPosition(1,1,valor2);
+        valor3 = new ComplexNumber(7, 0);
+        matriz2.AddInPosition(2,0,valor3);
+        matriz2.AddInPosition(2,1,valor3);
+        MatrizFilasColumnas matrizFinal = mathMatriz.ProductoTensor(matriz1, matriz2);
+        boolean flag = mathMatriz.IgualMatricial(matrizFinal, valorEsperado);
+        assertEquals(flagEsperada, flag);
+    }
+    
 }
