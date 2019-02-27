@@ -1,3 +1,5 @@
+package edu.eci;
+
 
 
 /*
@@ -106,6 +108,32 @@ public class mathMatriz {
         }
         return  vectorN;
     }
+    
+    public static VectorFilasColumna MultiplicacionMatrizVectorConMovimiento(MatrizFilasColumnas matriz, VectorFilasColumna vector, int movimientos){
+        VectorFilasColumna vectorN = new VectorFilasColumna(matriz.sizeFilas);;
+        MatrizFilasColumnas matrizActual = matriz; 
+        for (int a = 0; a < movimientos; a++){
+            ComplexNumber complejoN;
+            ComplexNumber complejoSuma;
+            for(int i = 0; i < matriz.sizeFilas; i++){
+                complejoSuma = new ComplexNumber(0, 0);
+                for(int o = 0; o < matriz.sizeColumnas; o++){
+                    complejoN = mathComplex.ProductoComplejos(vector.GetPosition(o), matrizActual.GetPosition(i, o));
+                    complejoSuma = mathComplex.SumaComplejos(complejoN, complejoSuma);
+                }
+                vectorN.AddValue(complejoSuma);
+                System.out.println("La bolsa de canicas " + i + " en el paso " + (a+1) + " tendra " + complejoSuma.GetReal());
+                
+            }  
+            
+            if (a+1 < movimientos){
+                    matrizActual = multiplicacionMatricial(matrizActual, matriz);
+                    vectorN = new VectorFilasColumna(matriz.sizeFilas);
+            }
+        }
+        return  vectorN;
+    }
+    
     
     public static MatrizFilasColumnas ProductoTensor(MatrizFilasColumnas matriz1, MatrizFilasColumnas matriz2){
         int contadorFilas = 0;

@@ -1,3 +1,5 @@
+package edu.eci;
+
 
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
@@ -273,6 +275,86 @@ public class TestMatrizFIlasColumnas {
         matriz2.AddInPosition(2,1,valor3);
         MatrizFilasColumnas matrizFinal = mathMatriz.ProductoTensor(matriz1, matriz2);
         boolean flag = mathMatriz.IgualMatricial(matrizFinal, valorEsperado);
+        assertEquals(flagEsperada, flag);
+    }
+    
+    
+    @Test
+    public void testMultiplicacionMatrizVectorBooleana() {
+        boolean flagEsperada = true;
+        VectorFilasColumna valorEsperado = new VectorFilasColumna(6);
+        ComplexNumber valor1 = new ComplexNumber(0, 0);
+        valorEsperado.AddValue(valor1);
+        ComplexNumber valor2 = new ComplexNumber(0, 0);
+        valorEsperado.AddValue(valor2);
+        ComplexNumber valor3 = new ComplexNumber(12, 0);
+        valorEsperado.AddValue(valor3);
+        ComplexNumber valor4 = new ComplexNumber(5, 0);
+        valorEsperado.AddValue(valor4);
+        ComplexNumber valor5 = new ComplexNumber(1, 0);
+        valorEsperado.AddValue(valor5);
+        ComplexNumber valor6 = new ComplexNumber(9, 0);
+        valorEsperado.AddValue(valor6);
+        VectorFilasColumna vector1 = new VectorFilasColumna(6);
+        valor1 = new ComplexNumber(6, 0);
+        vector1.AddValue(valor1);
+        valor2 = new ComplexNumber(2, 0);
+        vector1.AddValue(valor2);
+        valor3 = new ComplexNumber(1, 0);
+        vector1.AddValue(valor3);
+        valor4 = new ComplexNumber(5, 0);
+        vector1.AddValue(valor4);
+        valor5 = new ComplexNumber(3, 0);
+        vector1.AddValue(valor5);
+        valor6 = new ComplexNumber(10, 0);
+        vector1.AddValue(valor6);
+        MatrizFilasColumnas matriz1 = new MatrizFilasColumnas(6,6);
+        matriz1.AddInPosition(0,0,new ComplexNumber(0,0));
+        matriz1.AddInPosition(1,0,new ComplexNumber(0,0));
+        matriz1.AddInPosition(2,0,new ComplexNumber(0,0));
+        matriz1.AddInPosition(3,0,new ComplexNumber(0,0));
+        matriz1.AddInPosition(4,0,new ComplexNumber(0,0));
+        matriz1.AddInPosition(5,0,new ComplexNumber(1,0));
+        
+        matriz1.AddInPosition(0,1,new ComplexNumber(0,0));
+        matriz1.AddInPosition(1,1,new ComplexNumber(0,0));
+        matriz1.AddInPosition(2,1,new ComplexNumber(1,0));
+        matriz1.AddInPosition(3,1,new ComplexNumber(0,0));
+        matriz1.AddInPosition(4,1,new ComplexNumber(0,0));
+        matriz1.AddInPosition(5,1,new ComplexNumber(0,0));
+
+        matriz1.AddInPosition(0,2,new ComplexNumber(0,0));
+        matriz1.AddInPosition(1,2,new ComplexNumber(0,0));
+        matriz1.AddInPosition(2,2,new ComplexNumber(0,0));
+        matriz1.AddInPosition(3,2,new ComplexNumber(0,0));
+        matriz1.AddInPosition(4,2,new ComplexNumber(1,0));
+        matriz1.AddInPosition(5,2,new ComplexNumber(0,0));
+        
+        matriz1.AddInPosition(0,3,new ComplexNumber(0,0));
+        matriz1.AddInPosition(1,3,new ComplexNumber(0,0));
+        matriz1.AddInPosition(2,3,new ComplexNumber(0,0));
+        matriz1.AddInPosition(3,3,new ComplexNumber(1,0));
+        matriz1.AddInPosition(4,3,new ComplexNumber(0,0));
+        matriz1.AddInPosition(5,3,new ComplexNumber(0,0));
+
+        matriz1.AddInPosition(0,4,new ComplexNumber(0,0));
+        matriz1.AddInPosition(1,4,new ComplexNumber(0,0));
+        matriz1.AddInPosition(2,4,new ComplexNumber(0,0));
+        matriz1.AddInPosition(3,4,new ComplexNumber(0,0));
+        matriz1.AddInPosition(4,4,new ComplexNumber(0,0));
+        matriz1.AddInPosition(5,4,new ComplexNumber(1,0));
+
+        matriz1.AddInPosition(0,5,new ComplexNumber(0,0));
+        matriz1.AddInPosition(1,5,new ComplexNumber(0,0));
+        matriz1.AddInPosition(2,5,new ComplexNumber(1,0));
+        matriz1.AddInPosition(3,5,new ComplexNumber(0,0));
+        matriz1.AddInPosition(4,5,new ComplexNumber(0,0));
+        matriz1.AddInPosition(5,5,new ComplexNumber(0,0));
+        
+        
+        int numeroClicks = 4;
+        VectorFilasColumna matrizFinal = mathMatriz.MultiplicacionMatrizVectorConMovimiento(matriz1, vector1, numeroClicks);
+        boolean flag = mathComplexVectorSpace.IgualdadVectores(matrizFinal, valorEsperado);
         assertEquals(flagEsperada, flag);
     }
     

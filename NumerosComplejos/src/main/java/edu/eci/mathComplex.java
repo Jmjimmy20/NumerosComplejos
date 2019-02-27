@@ -1,3 +1,5 @@
+package edu.eci;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -23,7 +25,7 @@ public class mathComplex {
         double imaginarioNuevo = valorImaginario1+valorImaginario2;
         imaginarioNuevo = Math.round(imaginarioNuevo * 100) / 100d;
         numeroCNuevo = new ComplexNumber(realNuevo, imaginarioNuevo);
-        System.out.println("El resultado de la suma es: " + realNuevo + "+(" + imaginarioNuevo + ")i");
+        //System.out.println("El resultado de la suma es: " + realNuevo + "+(" + imaginarioNuevo + ")i");
         return numeroCNuevo;
     }
     
@@ -37,7 +39,7 @@ public class mathComplex {
         double parteReal = (valorReal1*valorReal2)+(valorImaginario1*valorImaginario2*-1);
         double parteImaginaria = (valorImaginario1*valorReal2)+(valorReal1*valorImaginario2);
         numeroCNuevo = new ComplexNumber(parteReal, parteImaginaria);
-        System.out.println("El resultado del producto es: " + parteReal + "+(" + parteImaginaria + ")i");
+        //System.out.println("El resultado del producto es: " + parteReal + "+(" + parteImaginaria + ")i");
         return numeroCNuevo;
     }
     
