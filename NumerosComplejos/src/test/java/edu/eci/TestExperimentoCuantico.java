@@ -181,7 +181,320 @@ public class TestExperimentoCuantico {
      }
      
      
-     
+//     @Test
+//     public void PruebaSlitsTargetsFraccionesComplejos(){
+//        boolean flagEsperada = true;
+////        double unTercio = (double)1/(double)3;
+////        double unNoveno = (double)1/(double)9;
+////        double dosNovenos = (double)2/(double)9;
+//        MatrizFilasColumnas matrizEsperadaSinAplicarEstado = new MatrizFilasColumnas(11, 11);
+//        
+//        matrizEsperadaSinAplicarEstado.AddInPosition(0,0,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(1,0,new ComplexNumber(Math.round((1./Math.sqrt(3.0)) * 100) / 100d,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(2,0,new ComplexNumber(Math.round((1./Math.sqrt(3.0)) * 100) / 100d,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(3,0,new ComplexNumber(Math.round((1./Math.sqrt(3.0)) * 100) / 100d,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(4,0,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(5,0,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(6,0,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(7,0,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(8,0,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(9,0,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(10,0,new ComplexNumber(0,0));
+//        
+//        
+//        matrizEsperadaSinAplicarEstado.AddInPosition(0,1,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(1,1,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(2,1,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(3,1,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(4,1,new ComplexNumber(Math.round((-1.0/Math.sqrt(6.0)) * 100) / 100d, Math.round((1.0/Math.sqrt(6.0)) * 100) / 100d));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(5,1,new ComplexNumber(Math.round((-1.0/Math.sqrt(6.0)) * 100) / 100d, Math.round((-1.0/Math.sqrt(6.0)) * 100) / 100d));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(6,1,new ComplexNumber(Math.round((1.0/Math.sqrt(6.0)) * 100) / 100d, Math.round((-1.0/Math.sqrt(6.0)) * 100) / 100d));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(7,1,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(8,1,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(9,1,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(10,1,new ComplexNumber(0,0));
+//
+//        matrizEsperadaSinAplicarEstado.AddInPosition(0,2,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(1,2,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(2,2,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(3,2,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(4,2,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(5,2,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(6,2,new ComplexNumber(Math.round((-1.0/Math.sqrt(6.0)) * 100) / 100d, Math.round((1.0/Math.sqrt(6.0)) * 100) / 100d));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(7,2,new ComplexNumber(Math.round((-1.0/Math.sqrt(6.0)) * 100) / 100d, Math.round((-1.0/Math.sqrt(6.0)) * 100) / 100d));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(8,2,new ComplexNumber(Math.round((1.0/Math.sqrt(6.0)) * 100) / 100d, Math.round((-1.0/Math.sqrt(6.0)) * 100) / 100d));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(9,2,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(10,2,new ComplexNumber(0,0));
+//        
+//        matrizEsperadaSinAplicarEstado.AddInPosition(0,3,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(1,3,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(2,3,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(3,3,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(4,3,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(5,3,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(6,3,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(7,3,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(8,3,new ComplexNumber(Math.round((-1.0/Math.sqrt(6.0)) * 100) / 100d, Math.round((1.0/Math.sqrt(6.0)) * 100) / 100d));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(9,3,new ComplexNumber(Math.round((-1.0/Math.sqrt(6.0)) * 100) / 100d, Math.round((-1.0/Math.sqrt(6.0)) * 100) / 100d));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(10,3,new ComplexNumber(Math.round((1.0/Math.sqrt(6.0)) * 100) / 100d, Math.round((-1.0/Math.sqrt(6.0)) * 100) / 100d));
+//        
+//
+//        matrizEsperadaSinAplicarEstado.AddInPosition(0,4,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(1,4,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(2,4,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(3,4,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(4,4,new ComplexNumber(1,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(5,4,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(6,4,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(7,4,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(8,4,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(9,4,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(10,4,new ComplexNumber(0,0));
+//        
+//
+//        matrizEsperadaSinAplicarEstado.AddInPosition(0,5,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(1,5,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(2,5,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(3,5,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(4,5,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(5,5,new ComplexNumber(5,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(6,5,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(7,5,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(8,5,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(9,5,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(10,5,new ComplexNumber(0,0));
+//        
+//        matrizEsperadaSinAplicarEstado.AddInPosition(0,6,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(1,6,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(2,6,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(3,6,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(4,6,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(5,6,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(6,6,new ComplexNumber(1,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(7,6,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(8,6,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(9,6,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(10,6,new ComplexNumber(0,0));
+//        
+//        matrizEsperadaSinAplicarEstado.AddInPosition(0,7,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(1,7,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(2,7,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(3,7,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(4,7,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(5,7,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(6,7,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(7,7,new ComplexNumber(1,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(8,7,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(9,7,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(10,7,new ComplexNumber(0,0));
+//        
+//        matrizEsperadaSinAplicarEstado.AddInPosition(0,8,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(1,8,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(2,8,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(3,8,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(4,8,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(5,8,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(6,8,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(7,8,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(8,8,new ComplexNumber(1,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(9,8,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(10,8,new ComplexNumber(0,0));
+//        
+//        matrizEsperadaSinAplicarEstado.AddInPosition(0,9,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(1,9,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(2,9,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(3,9,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(4,9,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(5,9,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(6,9,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(7,9,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(8,9,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(9,9,new ComplexNumber(1,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(10,9,new ComplexNumber(0,0));
+//        
+//        matrizEsperadaSinAplicarEstado.AddInPosition(0,10,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(1,10,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(2,10,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(3,10,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(4,10,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(5,10,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(6,10,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(7,10,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(8,10,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(9,10,new ComplexNumber(0,0));
+//        matrizEsperadaSinAplicarEstado.AddInPosition(10,10,new ComplexNumber(1,0));
+//
+//
+//        MatrizFilasColumnas matrizEsperadaConClick = new MatrizFilasColumnas(11, 11);
+//        
+//        matrizEsperadaConClick.AddInPosition(0,0,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(1,0,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(2,0,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(3,0,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(4,0,new ComplexNumber(1.0/9.0,0));
+//        matrizEsperadaConClick.AddInPosition(5,0,new ComplexNumber(1.0/9.0,0));
+//        matrizEsperadaConClick.AddInPosition(6,0,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(7,0,new ComplexNumber(1.0/9.0,0));
+//        matrizEsperadaConClick.AddInPosition(8,0,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(9,0,new ComplexNumber(1.0/9.0,0));
+//        matrizEsperadaConClick.AddInPosition(10,0,new ComplexNumber(1.0/9.0,0));
+//        
+//        
+//        matrizEsperadaConClick.AddInPosition(0,1,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(1,1,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(2,1,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(3,1,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(4,1,new ComplexNumber(1.0/3.0, 0));
+//        matrizEsperadaConClick.AddInPosition(5,1,new ComplexNumber(1.0/3.0, 0));
+//        matrizEsperadaConClick.AddInPosition(6,1,new ComplexNumber(1.0/3.0, 0));
+//        matrizEsperadaConClick.AddInPosition(7,1,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(8,1,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(9,1,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(10,1,new ComplexNumber(0,0));
+//
+//        matrizEsperadaConClick.AddInPosition(0,2,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(1,2,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(2,2,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(3,2,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(4,2,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(5,2,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(6,2,new ComplexNumber(1.0/3.0, 0));
+//        matrizEsperadaConClick.AddInPosition(7,2,new ComplexNumber(1.0/3.0, 0));
+//        matrizEsperadaConClick.AddInPosition(8,2,new ComplexNumber(1.0/3.0, 0));
+//        matrizEsperadaConClick.AddInPosition(9,2,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(10,2,new ComplexNumber(0,0));
+//        
+//        matrizEsperadaConClick.AddInPosition(0,3,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(1,3,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(2,3,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(3,3,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(4,3,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(5,3,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(6,3,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(7,3,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(8,3,new ComplexNumber(1.0/3.0, 0));
+//        matrizEsperadaConClick.AddInPosition(9,3,new ComplexNumber(1.0/3.0, 0));
+//        matrizEsperadaConClick.AddInPosition(10,3,new ComplexNumber(1.0/3.0, 0));
+//        
+//
+//        matrizEsperadaConClick.AddInPosition(0,4,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(1,4,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(2,4,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(3,4,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(4,4,new ComplexNumber(1,0));
+//        matrizEsperadaConClick.AddInPosition(5,4,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(6,4,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(7,4,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(8,4,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(9,4,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(10,4,new ComplexNumber(0,0));
+//        
+//
+//        matrizEsperadaConClick.AddInPosition(0,5,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(1,5,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(2,5,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(3,5,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(4,5,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(5,5,new ComplexNumber(5,0));
+//        matrizEsperadaConClick.AddInPosition(6,5,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(7,5,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(8,5,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(9,5,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(10,5,new ComplexNumber(0,0));
+//        
+//        matrizEsperadaConClick.AddInPosition(0,6,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(1,6,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(2,6,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(3,6,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(4,6,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(5,6,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(6,6,new ComplexNumber(1,0));
+//        matrizEsperadaConClick.AddInPosition(7,6,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(8,6,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(9,6,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(10,6,new ComplexNumber(0,0));
+//        
+//        matrizEsperadaConClick.AddInPosition(0,7,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(1,7,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(2,7,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(3,7,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(4,7,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(5,7,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(6,7,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(7,7,new ComplexNumber(1,0));
+//        matrizEsperadaConClick.AddInPosition(8,7,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(9,7,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(10,7,new ComplexNumber(0,0));
+//        
+//        matrizEsperadaConClick.AddInPosition(0,8,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(1,8,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(2,8,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(3,8,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(4,8,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(5,8,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(6,8,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(7,8,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(8,8,new ComplexNumber(1,0));
+//        matrizEsperadaConClick.AddInPosition(9,8,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(10,8,new ComplexNumber(0,0));
+//        
+//        matrizEsperadaConClick.AddInPosition(0,9,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(1,9,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(2,9,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(3,9,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(4,9,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(5,9,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(6,9,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(7,9,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(8,9,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(9,9,new ComplexNumber(1,0));
+//        matrizEsperadaConClick.AddInPosition(10,9,new ComplexNumber(0,0));
+//        
+//        matrizEsperadaConClick.AddInPosition(0,10,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(1,10,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(2,10,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(3,10,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(4,10,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(5,10,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(6,10,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(7,10,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(8,10,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(9,10,new ComplexNumber(0,0));
+//        matrizEsperadaConClick.AddInPosition(10,10,new ComplexNumber(1,0));
+//        
+//        
+//        VectorFilasColumna productoMatrizConClickVector = new VectorFilasColumna(11);
+//        
+//        productoMatrizConClickVector.AddValue(new );
+//        double[] productoMatrizConClickVector = {0,0,0,0,1.0/9.0,1.0/9.0,0,1.0/9.0,0,1.0/9.0,1.0/9.0};
+//        
+//        double[] vector = {1,0,0,0,0,0,0,0,0,0,0};
+//        
+//        double[][] probabilidades = {
+//        {0,unTercio,0,0,0,0,0,0,0,0,0},
+//        {0,unTercio,0,0,0,0,0,0,0,0,0},
+//        {0,unTercio,unTercio,0,0,0,0,0,0,0,0},
+//        {0,0,unTercio,0,0,0,0,0,0,0,0},
+//        {0,0,unTercio,unTercio,0,0,0,0,0,0,0},
+//        {0,0,0,unTercio,0,0,0,0,0,0,0},
+//        {0,0,0,unTercio,0,0,0,0,0,0,0}
+//        };
+//        
+//        double[][] matrizConstruida = ExperimentoCuantico.CreacionMatrizConSlitsTargets(3,7,probabilidades);
+//        boolean flag = ExperimentoCuantico.IgualMatricial(matrizConstruida, matrizEsperadaSinAplicarEstado);
+//        if(!flag){
+//            assertEquals(flagEsperada, flag);
+//        }
+//        double[][] matrizConClick = ExperimentoCuantico.MultiplicacionMatricial(matrizConstruida, matrizConstruida);
+//        flag = ExperimentoCuantico.IgualMatricial(matrizConClick, matrizEsperadaConClick);
+//        if(!flag){
+//            assertEquals(flagEsperada, flag);
+//        }
+//        
+//        double[] vectorConClickMultiplicado = ExperimentoCuantico.MultiplicacionMatrizVector(matrizConClick, vector);
+//        flag = ExperimentoCuantico.igualdadVectores(vectorConClickMultiplicado, productoMatrizConClickVector);
+//        assertEquals(flagEsperada, flag);
+//     }
      
      
 }
