@@ -23,25 +23,25 @@ public class TestExperimentoCuantico {
         boolean flagEsperada = true;
         double[] valorEsperado = new double[4];
         valorEsperado[0] = 0;
-        valorEsperado[1] = 1/2;
-        valorEsperado[2] = 1/2;
+        valorEsperado[1] = 1.0/2.0;
+        valorEsperado[2] = 1.0/2.0;
         valorEsperado[3] = 0;
         double[][] matriz = new double[4][4];
         matriz[0][0] = 0;
-        matriz[0][1] = 1/2;
-        matriz[0][2] = 1/2;
+        matriz[0][1] = 1.0/2.0;
+        matriz[0][2] = 1.0/2.0;
         matriz[0][3] = 0;
-        matriz[1][0] = 1/2;
+        matriz[1][0] = 1.0/2.0;
         matriz[1][1] = 0;
         matriz[1][2] = 0;
-        matriz[1][3] = 1/2;
-        matriz[2][0] = 1/2;
+        matriz[1][3] = 1.0/2.0;
+        matriz[2][0] = 1.0/2.0;
         matriz[2][1] = 0;
         matriz[2][2] = 0;
-        matriz[2][3] = 1/2;
+        matriz[2][3] = 1.0/2.0;
         matriz[3][0] = 0;
-        matriz[3][1] = 1/2;
-        matriz[3][2] = 1/2;
+        matriz[3][1] = 1.0/2.0;
+        matriz[3][2] = 1.0/2.0;
         matriz[3][3] = 0;
         double[] vector = new double[4];
         vector[0] = 1;
@@ -51,14 +51,7 @@ public class TestExperimentoCuantico {
         double[] vectorFinal = ExperimentoCuantico.MultiplicacionMatrizVectorConMovimiento(matriz, vector, 1);
         boolean flag = ExperimentoCuantico.igualdadVectores(vectorFinal, valorEsperado);
         assertEquals(flagEsperada, flag);
-//        double[] estadoFinalResultToCompare2 = {1.0 / 2.0, 0, 0, 1.0 / 2.0};
-//        try {
-//            double[] estadoFinalResult2 = quantumExperiments.experimentoConMarblesFracciones(matrizAdyacencia, estadoInicial, 2);
-//            Assert.assertArrayEquals(estadoFinalResultToCompare2, estadoFinalResult2, 0);
-//        } catch (MathComplexException ex) {
-//            System.out.println(ex.getMessage());
-//            fail("El experimento falló.");
-//        }
+
      }
      
      @Test
@@ -66,26 +59,26 @@ public class TestExperimentoCuantico {
      {
         boolean flagEsperada = true;
         double[] valorEsperado = new double[4];
-        valorEsperado[0] = 1/2;
+        valorEsperado[0] = 1.0/2.0;
         valorEsperado[1] = 0;
         valorEsperado[2] = 0;
-        valorEsperado[3] = 1/2;
+        valorEsperado[3] = 1.0/2.0;
         double[][] matriz = new double[4][4];
         matriz[0][0] = 0;
-        matriz[0][1] = 1/2;
-        matriz[0][2] = 1/2;
+        matriz[0][1] = 1.0/2.0;
+        matriz[0][2] = 1.0/2.0;
         matriz[0][3] = 0;
-        matriz[1][0] = 1/2;
+        matriz[1][0] = 1.0/2.0;
         matriz[1][1] = 0;
         matriz[1][2] = 0;
-        matriz[1][3] = 1/2;
-        matriz[2][0] = 1/2;
+        matriz[1][3] = 1.0/2.0;
+        matriz[2][0] = 1.0/2.0;
         matriz[2][1] = 0;
         matriz[2][2] = 0;
-        matriz[2][3] = 1/2;
+        matriz[2][3] = 1.0/2.0;
         matriz[3][0] = 0;
-        matriz[3][1] = 1/2;
-        matriz[3][2] = 1/2;
+        matriz[3][1] = 1.0/2.0;
+        matriz[3][2] = 1.0/2.0;
         matriz[3][3] = 0;
         double[] vector = new double[4];
         vector[0] = 1;
@@ -160,4 +153,9 @@ public class TestExperimentoCuantico {
         flag = ExperimentoCuantico.igualdadVectores(vectorConClickMultiplicado, productoMatrizConClickVector);
         assertEquals(flagEsperada, flag);
      }
+     
+     
+     
+     
+     
 }
