@@ -154,6 +154,32 @@ public class TestExperimentoCuantico {
         assertEquals(flagEsperada, flag);
      }
      
+     @Test
+     public void PruebaMultiplicacionMatrizVectorComplejos(){
+         boolean flagEsperada = true;
+        VectorFilasColumna valorEsperado = new VectorFilasColumna(3);
+        valorEsperado.AddValue(new ComplexNumber(Math.round((Math.sqrt(5.0)/Math.sqrt(30.0)) * 100) / 100d, Math.round((2.0/Math.sqrt(30.0)) * 100) / 100d));
+        valorEsperado.AddValue(new ComplexNumber(Math.round((-2.0/Math.sqrt(30.0)) * 100) / 100d,Math.round(-(Math.sqrt(5.0))/Math.sqrt(30.0) * 100)/100d));
+        valorEsperado.AddValue(new ComplexNumber(0, Math.round((Math.sqrt(2.0/5.0)) * 100) / 100d));
+        MatrizFilasColumnas matriz = new MatrizFilasColumnas(3, 3);
+        matriz.AddInPosition(0, 0, new ComplexNumber(1.0/Math.sqrt(2.0), 0));
+        matriz.AddInPosition(0, 1, new ComplexNumber(1.0/Math.sqrt(2.0), 0));
+        matriz.AddInPosition(0, 2, new ComplexNumber(0, 0));
+        matriz.AddInPosition(1, 0, new ComplexNumber(0, -1.0/Math.sqrt(2.0)));
+        matriz.AddInPosition(1, 1, new ComplexNumber(0, 1.0/Math.sqrt(2.0)));
+        matriz.AddInPosition(1, 2, new ComplexNumber(0, 0));
+        matriz.AddInPosition(2, 0, new ComplexNumber(0, 0));
+        matriz.AddInPosition(2, 1, new ComplexNumber(0, 0));
+        matriz.AddInPosition(2, 2, new ComplexNumber(0, 1.0/Math.sqrt(2.0)));
+        VectorFilasColumna vector = new VectorFilasColumna(3);
+        vector.AddValue(new ComplexNumber(1.0/Math.sqrt(3.0), 0));
+        vector.AddValue(new ComplexNumber(0, 2.0/Math.sqrt(15.0)));
+        vector.AddValue(new ComplexNumber(2.0/Math.sqrt(5.0), 0));
+        VectorFilasColumna vectorFinal = mathMatriz.MultiplicacionMatrizVectorConMovimiento(matriz, vector, 1);
+        boolean flag = mathComplexVectorSpace.IgualdadVectores(vectorFinal, valorEsperado);
+        assertEquals(flagEsperada, flag);
+     }
+     
      
      
      

@@ -46,7 +46,9 @@ public class mathComplexVectorSpace {
         int tamanio = matriz1.GetSize();
         boolean iguales = true;
         for (int i = 0; i < tamanio; i++){
+            System.out.println("vector1 " + matriz1.GetPosition(i).GetReal() +" " + matriz1.GetPosition(i).Getimaginario() + " vector2 " + matriz2.GetPosition(i).GetReal() + " " + matriz2.GetPosition(i).Getimaginario());
             if(!mathComplex.igualdadComplejos(matriz1.GetPosition(i), matriz2.GetPosition(i))){
+                System.out.println("Entre aqui");
                 iguales = false;
             }
         }

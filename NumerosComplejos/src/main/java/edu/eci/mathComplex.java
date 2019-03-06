@@ -69,7 +69,9 @@ public class mathComplex {
         double yNumerador = (valorReal2*valorImaginario1) - (valorReal1*valorImaginario2);
         double Denominador = Math.pow(valorReal2, 2) + Math.pow(valorImaginario2, 2);
         double valorReal = xNumerador/Denominador;
+        valorReal = Math.round(valorReal * 100) / 100d;
         double valorImaginario = yNumerador/Denominador;
+        valorImaginario = Math.round(valorImaginario * 100) / 100d;
         numeroCNuevo = new ComplexNumber(valorReal, valorImaginario);
         System.out.println("El resultado de la division es: " + valorReal + "+(" + valorImaginario + ")i");
         return numeroCNuevo;
