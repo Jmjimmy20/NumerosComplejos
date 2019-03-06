@@ -110,7 +110,7 @@ public class mathMatriz {
     }
     
     public static VectorFilasColumna MultiplicacionMatrizVectorConMovimiento(MatrizFilasColumnas matriz, VectorFilasColumna vector, int movimientos){
-        VectorFilasColumna vectorN = new VectorFilasColumna(matriz.sizeFilas);;
+        VectorFilasColumna vectorN = new VectorFilasColumna(matriz.sizeFilas);
         MatrizFilasColumnas matrizActual = matriz; 
         for (int a = 0; a < movimientos; a++){
             ComplexNumber complejoN;
