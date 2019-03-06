@@ -96,4 +96,68 @@ public class TestExperimentoCuantico {
         boolean flag = ExperimentoCuantico.igualdadVectores(vectorFinal, valorEsperado);
         assertEquals(flagEsperada, flag);
      }
+     
+     @Test
+     public void PruebaSlitsTargetsFracciones(){
+        boolean flagEsperada = true;
+        double unTercio = (double)1/(double)3;
+        double unNoveno = (double)1/(double)9;
+        double dosNovenos = (double)2/(double)9;
+        double[][] matrizEsperadaSinAplicarEstado = {
+            {0,0,0,0,0,0,0,0,0,0,0},
+            {unTercio,0,0,0,0,0,0,0,0,0,0},
+            {unTercio,0,0,0,0,0,0,0,0,0,0},
+            {unTercio,0,0,0,0,0,0,0,0,0,0},
+            {0,unTercio,0,0,1,0,0,0,0,0,0},
+            {0,unTercio,0,0,0,1,0,0,0,0,0},
+            {0,unTercio,unTercio,0,0,0,1,0,0,0,0},
+            {0,0,unTercio,0,0,0,0,1,0,0,0},
+            {0,0,unTercio,unTercio,0,0,0,0,1,0,0},
+            {0,0,0,unTercio,0,0,0,0,0,1,0},
+            {0,0,0,unTercio,0,0,0,0,0,0,1}
+        };
+        
+        double[][] matrizEsperadaConClick = {
+            {0,0,0,0,0,0,0,0,0,0,0},
+            {0,0,0,0,0,0,0,0,0,0,0},
+            {0,0,0,0,0,0,0,0,0,0,0},
+            {0,0,0,0,0,0,0,0,0,0,0},
+            {unNoveno,unTercio,0,0,1,0,0,0,0,0,0},
+            {unNoveno,unTercio,0,0,0,1,0,0,0,0,0},
+            {dosNovenos,unTercio,unTercio,0,0,0,1,0,0,0,0},
+            {unNoveno,0,unTercio,0,0,0,0,1,0,0,0},
+            {dosNovenos,0,unTercio,unTercio,0,0,0,0,1,0,0},
+            {unNoveno,0,0,unTercio,0,0,0,0,0,1,0},
+            {unNoveno,0,0,unTercio,0,0,0,0,0,0,1}
+        };
+        
+        double[] productoMatrizConClickVector = {0,0,0,0,unNoveno,unNoveno,dosNovenos,unNoveno,dosNovenos,unNoveno,unNoveno};
+        
+        double[] vector = {1,0,0,0,0,0,0,0,0,0,0};
+        
+        double[][] probabilidades = {
+        {0,unTercio,0,0,0,0,0,0,0,0,0},
+        {0,unTercio,0,0,0,0,0,0,0,0,0},
+        {0,unTercio,unTercio,0,0,0,0,0,0,0,0},
+        {0,0,unTercio,0,0,0,0,0,0,0,0},
+        {0,0,unTercio,unTercio,0,0,0,0,0,0,0},
+        {0,0,0,unTercio,0,0,0,0,0,0,0},
+        {0,0,0,unTercio,0,0,0,0,0,0,0}
+        };
+        
+        double[][] matrizConstruida = ExperimentoCuantico.CreacionMatrizConSlitsTargets(3,7,probabilidades);
+        boolean flag = ExperimentoCuantico.IgualMatricial(matrizConstruida, matrizEsperadaSinAplicarEstado);
+        if(!flag){
+            assertEquals(flagEsperada, flag);
+        }
+        double[][] matrizConClick = ExperimentoCuantico.MultiplicacionMatricial(matrizConstruida, matrizConstruida);
+        flag = ExperimentoCuantico.IgualMatricial(matrizConClick, matrizEsperadaConClick);
+        if(!flag){
+            assertEquals(flagEsperada, flag);
+        }
+        
+        double[] vectorConClickMultiplicado = ExperimentoCuantico.MultiplicacionMatrizVector(matrizConClick, vector);
+        flag = ExperimentoCuantico.igualdadVectores(vectorConClickMultiplicado, productoMatrizConClickVector);
+        assertEquals(flagEsperada, flag);
+     }
 }
