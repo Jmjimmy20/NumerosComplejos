@@ -31,7 +31,7 @@ En este espacio se detallaran cada una de las pruebas que comprenden cada uno de
  3.  **Multiplicación de complejos**
 	En este prueba se muestra como el código acepta dos números complejos y saca el resultado de la multiplicación de estos dos.
 	
-	![](Images/Imagen4.PNG) 
+![](Images/Imagen4.PNG) 
 	
 	
 # **Experimentos**
