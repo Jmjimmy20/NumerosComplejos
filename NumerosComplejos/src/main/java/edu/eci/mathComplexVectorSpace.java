@@ -109,6 +109,12 @@ public class mathComplexVectorSpace {
         }
     }
     
+//    public static ComplexVectorSpace BraVector(ComplexVectorSpace vector){
+//        return mathComplexVectorSpace.
+//    }
+    
+    
+    
     public static boolean IgualdadMatricial(MatrizFilasColumnas matriz1,MatrizFilasColumnas matriz2){
         boolean valorRetorno = true;
         if ((matriz1.sizeColumnas != matriz2.sizeColumnas) || (matriz1.sizeFilas != matriz2.sizeFilas)){
@@ -128,6 +134,23 @@ public class mathComplexVectorSpace {
         
     }
     
-
+    
+    public static ComplexNumber AmplitudTransicion(ComplexVectorSpace ket1, ComplexVectorSpace ket2){
+        return ProductoInternoVectorVector(ket1, ket2);
+    }
+    
+    
+    public static ComplexNumber ProductoInternoVectorVector(ComplexVectorSpace vector1, ComplexVectorSpace vector2){
+        if (vector1.size == vector2.size){
+            ComplexNumber sumador = new ComplexNumber(0, 0);
+            for(int i = 0; i < vector1.GetSize(); i++){
+                sumador = mathComplex.SumaComplejos(sumador, mathComplex.ProductoComplejos(vector1.GetPosition(i), vector2.GetPosition(i)));
+            }
+            return sumador;
+        }
+        else{
+            return null;
+        }
+    }
             
 }

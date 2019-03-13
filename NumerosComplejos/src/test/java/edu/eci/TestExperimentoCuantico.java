@@ -515,10 +515,46 @@ public class TestExperimentoCuantico {
         ket.AddValue(new ComplexNumber(2, 0));
         int puntoBuscar = 3;
         double probabilidad = ExperimentoCuantico.ProbabilidadPunto(ket.GetPosition(puntoBuscar),ket);
-         System.out.println("dfsdfsdfs" + probabilidad);
+         System.out.println("probabilidad " + probabilidad);
         boolean flag = ExperimentoCuantico.IgualdadValores(probabilidad, valorEsperado.GetPosition(puntoBuscar).GetReal());
         assertEquals(flagEsperada, flag);
 
      }  
+     
+     
+    @Test
+     public void testTrancitarEntreDosKets() 
+     {
+        boolean flagEsperada = true;
+         ComplexNumber valorEsperado = new ComplexNumber(0, -2);
+        
+        ComplexVectorSpace ket1 = new ComplexVectorSpace(2);
+        ket1.AddValue(new ComplexNumber(0, -1));
+        ket1.AddValue(new ComplexNumber(1, 0));
+        
+        ComplexVectorSpace ket2 = new ComplexVectorSpace(2);
+        ket2.AddValue(new ComplexNumber(1, 0));
+        ket2.AddValue(new ComplexNumber(0, -1));
+
+        ComplexNumber respuesta = mathComplexVectorSpace.AmplitudTransicion(ket1, ket2);
+        boolean flag = mathComplex.igualdadComplejos(respuesta, valorEsperado);
+        assertEquals(flagEsperada, flag);
+
+//        double val1 = Math.sqrt(2)/2;
+//
+//        ket2 = new ComplexVectorSpace(2);
+//        ket2.AddValue(new ComplexNumber(0, val1));
+//        ket2.AddValue(new ComplexNumber(val1, 0));
+//        
+//         ket1 = new ComplexVectorSpace(2);
+//        ket1.AddValue(new ComplexNumber(val1, 0));
+//        ket1.AddValue(new ComplexNumber(0, val1));
+//        
+//        ComplexNumber respuesta2 = mathComplexVectorSpace.AmplitudTransicion(ket1, ket2);
+//         System.out.println("real " + respuesta2.GetReal() + " imaginario" + respuesta2.Getimaginario());
+//        boolean flag2 = mathComplex.igualdadComplejos(respuesta2, valorEsperado);
+//        assertEquals(flag, flag2);
+     } 
+     
      
 }
