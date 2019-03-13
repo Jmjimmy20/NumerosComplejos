@@ -113,6 +113,10 @@ public class ExperimentoCuantico {
         return matrizRespuesta;
     }
     
+    public static double ProbabilidadPunto(ComplexNumber punto, ComplexVectorSpace ket) {
+        return Math.pow(punto.Modulus(), 2) / Math.pow(mathComplexVectorSpace.NormComplejos(ket), 2);
+    }
+    
     
     public static boolean IgualMatricial(double[][] matriz1, double[][] matriz2){
         boolean bandera = true;
@@ -125,4 +129,12 @@ public class ExperimentoCuantico {
         }
         return bandera;
     }
+    
+    
+    public static boolean IgualdadValores(double valor1, double valor2){
+        return valor1 == valor2;
+    }
+    
+    
+    
 }

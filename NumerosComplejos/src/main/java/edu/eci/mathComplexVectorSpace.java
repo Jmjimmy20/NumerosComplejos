@@ -72,7 +72,8 @@ public class mathComplexVectorSpace {
             ComplexNumber ComplejoN = mathComplex.ProductoComplejos(vector1.GetPosition(i).Conjugado(), vector1.GetPosition(i));
             numeroN = ComplejoN.GetReal() + numeroN;
         }
-        return (double)Math.sqrt(numeroN);
+        double retorno = Math.round(Math.sqrt(numeroN) * 10000) / 10000d;
+        return retorno;
     }
     
     public static double DistanceComplejos(ComplexVectorSpace vector1, ComplexVectorSpace vector2){
@@ -127,6 +128,6 @@ public class mathComplexVectorSpace {
         
     }
     
-    
+
             
 }

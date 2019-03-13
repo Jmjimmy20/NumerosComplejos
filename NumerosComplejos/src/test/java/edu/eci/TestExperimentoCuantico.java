@@ -497,4 +497,28 @@ public class TestExperimentoCuantico {
 //     }
      
      
+   @Test
+     public void testEncontrarProbabilidadDeUnPunto() 
+     {
+        boolean flagEsperada = true;
+        VectorFilasColumna valorEsperado = new VectorFilasColumna(4);
+        valorEsperado.AddValue(new ComplexNumber(0.5263155343491542, 0));
+        valorEsperado.AddValue(new ComplexNumber(0.21052621373966163, 0));
+        valorEsperado.AddValue(new ComplexNumber(0.05263155343491541, 0));
+        valorEsperado.AddValue(new ComplexNumber(0.21052621373966163, 0));
+        
+        int cantidadPuntos = 4;
+        ComplexVectorSpace ket = new ComplexVectorSpace(cantidadPuntos);
+        ket.AddValue(new ComplexNumber(-3, -1));
+        ket.AddValue(new ComplexNumber(0, -2));
+        ket.AddValue(new ComplexNumber(0, 1));
+        ket.AddValue(new ComplexNumber(2, 0));
+        int puntoBuscar = 3;
+        double probabilidad = ExperimentoCuantico.ProbabilidadPunto(ket.GetPosition(puntoBuscar),ket);
+         System.out.println("dfsdfsdfs" + probabilidad);
+        boolean flag = ExperimentoCuantico.IgualdadValores(probabilidad, valorEsperado.GetPosition(puntoBuscar).GetReal());
+        assertEquals(flagEsperada, flag);
+
+     }  
+     
 }
