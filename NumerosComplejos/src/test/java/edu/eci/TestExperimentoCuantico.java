@@ -536,6 +536,8 @@ public class TestExperimentoCuantico {
         ket2.AddValue(new ComplexNumber(1, 0));
         ket2.AddValue(new ComplexNumber(0, -1));
 
+        
+        
         ComplexNumber respuesta = mathComplexVectorSpace.AmplitudTransicion(ket1, ket2);
         boolean flag = mathComplex.igualdadComplejos(respuesta, valorEsperado);
         assertEquals(flagEsperada, flag);

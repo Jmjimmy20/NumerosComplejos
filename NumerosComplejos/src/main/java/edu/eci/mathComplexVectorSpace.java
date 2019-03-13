@@ -135,22 +135,28 @@ public class mathComplexVectorSpace {
     }
     
     
+//    public static ComplexVectorSpace BraVector(ComplexVectorSpace ket){
+//        return AdjuntaVector(ket);
+//    }
+    
+    
+//    public static ComplexVectorSpace AdjuntaVector(ComplexVectorSpace vector){
+//        return conjugadaVector(transpuestaVector(vector));
+//    }
+//
+//    private static ComplexVectorSpace transpuestaVector(ComplexVectorSpace vector) {
+//
+//    }
+//    
+//    public ComplexVectorSpace conjugadaVector(ComplexVectorSpace vector) {
+// 
+//    }
+    
+    
     public static ComplexNumber AmplitudTransicion(ComplexVectorSpace ket1, ComplexVectorSpace ket2){
-        return ProductoInternoVectorVector(ket1, ket2);
+        return InnerProduct(ket1, ket2);
     }
     
-    
-    public static ComplexNumber ProductoInternoVectorVector(ComplexVectorSpace vector1, ComplexVectorSpace vector2){
-        if (vector1.size == vector2.size){
-            ComplexNumber sumador = new ComplexNumber(0, 0);
-            for(int i = 0; i < vector1.GetSize(); i++){
-                sumador = mathComplex.SumaComplejos(sumador, mathComplex.ProductoComplejos(vector1.GetPosition(i), vector2.GetPosition(i)));
-            }
-            return sumador;
-        }
-        else{
-            return null;
-        }
-    }
+   
             
 }
