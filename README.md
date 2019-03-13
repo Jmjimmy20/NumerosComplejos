@@ -32,3 +32,51 @@ En este espacio se detallaran cada una de las pruebas que comprenden cada uno de
 	En este prueba se muestra como el código acepta dos números complejos y saca el resultado de la multiplicación de estos dos.
 	
 	![](Images/Imagen4.PNG) 
+	
+	
+# **Experimentos**
+
+# **1.	Experimento de la doble rendija**
+
+**Descripcion:**
+
+
+**Realización:**
+
+**a. Materiales:**
+
+**b. Pasos:**
+
+**Fotos de demostración:**
+
+![](Images/representacionLacer.jpg)
+
+
+ ![](Images/representacionPapel.jpg)
+
+
+ ![](Images/representacionPapelAluminio1.jpg)
+
+
+ ![](Images/RepresentacionLacerAluminio1.jpg)
+
+
+ ![](Images/RepresentacionLacerAluminio2.jpg)
+
+
+ ![](Images/RepresentacionLacerAluminio3.jpg)
+
+
+ ![](Images/RepresentacionLacerAluminio4.jpg)
+
+
+![](Images/RepresentacionLacerPapel1.jpg)
+
+
+![](Images/RepresentacionLacerPapel2.jpg)
+
+
+![](Images/RepresentacionLacerPapel3.jpg)
+
+
+![](Images/RepresentacionLacerPapel4.jpg)
