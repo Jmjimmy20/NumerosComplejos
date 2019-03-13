@@ -53,6 +53,7 @@ En este espacio se detallaran cada una de las pruebas que comprenden cada uno de
 	- Un marcador negro
 
 **b. Pasos:**
+
 	1. Para iniciar con el experimento marcaremos en la hoja blanca en uno de sus bordes centrales una raya gruesa con el marcador negro.
 	
 	2. Con el bisturi realizar dos cortes dentro de esta linea, estos dos cortes tienen que estar muy cercanos.
