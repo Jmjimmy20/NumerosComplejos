@@ -54,23 +54,24 @@ En este espacio se detallaran cada una de las pruebas que comprenden cada uno de
 
 **b. Pasos**
 
-	1. Para iniciar con el experimento marcaremos en la hoja blanca en uno de sus bordes centrales una raya gruesa con el marcador negro.
+1. Para iniciar con el experimento marcaremos en la hoja blanca en uno de sus bordes centrales una raya gruesa con el marcador negro.
 	
-	2. Con el bisturi realizar dos cortes dentro de esta linea, estos dos cortes tienen que estar muy cercanos.
+2. Con el bisturi realizar dos cortes dentro de esta linea, estos dos cortes tienen que estar muy cercanos.
 	
-	3. Con el lacer vamos a apuntarle a esta rendija que creamos en el papel y procedemos a observar en la pared o en el objeto que tengamos al frente, el patron que logramos obtener.
+3. Con el lacer vamos a apuntarle a esta rendija que creamos en el papel y procedemos a observar en la pared o en el objeto que tengamos al frente, el patron que logramos obtener.
 	
-	**Segunda forma**
+**Segunda forma**
 	
-	1. Para iniciar con el experimento vamos a cortar una hoja de papel de forma que se forme un marco donde proximamente estara nuestro papel aluminio.
+1. Para iniciar con el experimento vamos a cortar una hoja de papel de forma que se forme un marco donde proximamente estara nuestro papel aluminio.
 	
-	2. Ponemos una hoja de papel aluminio en el marco que hemos creado y lo aseguramos a la hoja con cinta.
+2. Ponemos una hoja de papel aluminio en el marco que hemos creado y lo aseguramos a la hoja con cinta.
 	
-	3. Con el bisturi realizamos dos cortes en linea recta en la hoja de aluminio. El los dos cortes deben ser muy sercanos.
+3. Con el bisturi realizamos dos cortes en linea recta en la hoja de aluminio. El los dos cortes deben ser muy sercanos.
 	
-	4. (Para este paso vamos a tener precaucion por que la hoja de aluminio generara un reflejo del lacer que puede apuntar a los ojos).
+4. (Para este paso vamos a tener precaucion por que la hoja de aluminio generara un reflejo del lacer que puede apuntar a los ojos).
 	
-	Con el lacer vamos a apuntar hacia la rendija que construimos en el papel alimunio y observaremos en la pared o en el objeto que se tenga al frente el patron que se formara.
+Con el lacer vamos a apuntar hacia la rendija que construimos en el papel alimunio y observaremos en la pared o en el objeto que se tenga al frente el patron que se formara.
+	
 	
 
 **Fotos de demostración:**
