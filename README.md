@@ -44,7 +44,7 @@ En este espacio se detallaran cada una de las pruebas que comprenden cada uno de
 
 **Realización:**
 
-**a. Materiales:**
+**a. Materiales**
 
 	- Una hoja de papel
 	- Un bisturi
@@ -52,7 +52,7 @@ En este espacio se detallaran cada una de las pruebas que comprenden cada uno de
 	- Un lacer
 	- Un marcador negro
 
-**b. Pasos:**
+**b. Pasos**
 
 	1. Para iniciar con el experimento marcaremos en la hoja blanca en uno de sus bordes centrales una raya gruesa con el marcador negro.
 	
