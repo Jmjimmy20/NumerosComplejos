@@ -49,34 +49,34 @@ En este espacio se detallaran cada una de las pruebas que comprenden cada uno de
 
 **Fotos de demostración:**
 
-![](Images/representacionLacer.jpg)
+![](Images/experimentoRendijas/representacionLacer.jpg)
 
 
- ![](Images/representacionPapel.jpg)
+ ![](Images/experimentoRendijas/representacionPapel.jpg)
 
 
- ![](Images/representacionPapelAluminio1.jpg)
+ ![](Images/experimentoRendijas/representacionPapelAluminio1.jpg)
 
 
- ![](Images/RepresentacionLacerAluminio1.jpg)
+ ![](Images/experimentoRendijas/RepresentacionLacerAluminio1.jpg)
 
 
- ![](Images/RepresentacionLacerAluminio2.jpg)
+ ![](Images/experimentoRendijas/RepresentacionLacerAluminio2.jpg)
 
 
- ![](Images/RepresentacionLacerAluminio3.jpg)
+ ![](Images/experimentoRendijas/RepresentacionLacerAluminio3.jpg)
 
 
- ![](Images/RepresentacionLacerAluminio4.jpg)
+ ![](Images/experimentoRendijas/RepresentacionLacerAluminio4.jpg)
 
 
-![](Images/RepresentacionLacerPapel1.jpg)
+![](Images/experimentoRendijas/RepresentacionLacerPapel1.jpg)
 
 
-![](Images/RepresentacionLacerPapel2.jpg)
+![](Images/experimentoRendijas/RepresentacionLacerPapel2.jpg)
 
 
-![](Images/RepresentacionLacerPapel3.jpg)
+![](Images/experimentoRendijas/RepresentacionLacerPapel3.jpg)
 
 
-![](Images/RepresentacionLacerPapel4.jpg)
+![](Images/experimentoRendijas/RepresentacionLacerPapel4.jpg)
