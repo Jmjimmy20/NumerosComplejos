@@ -43,7 +43,7 @@ En este espacio se detallaran cada una de las pruebas que comprenden cada uno de
 # **1.	Experimento de la doble rendija**
 
 **Descripcion:**
-En este experimento se busca mostrar cual es el comportamiento que tienen los fotones que comprenden un lacer y como estos reaccionan a una rendija que se posiciona al frente de esta, de esta manera mostrar cual es la probabilidad de encontrar un proton especificio en donde se podra encontrar y cual fue la probabilidad de que se encontrara en esta posicion y que camino eligio.
+En este experimento se busca mostrar cual es el comportamiento que tienen los fotones y comom estos se ven afectados al interartuar con los mulitversos. El experimento busca mostrar como los fotones que comprenden un lacer y como estos reaccionan a una rendija que se posiciona al frente de esta, de esta manera mostrar cual es la probabilidad de encontrar un proton especificio en donde se podra encontrar y cual fue la probabilidad de que se encontrara en esta posicion y que camino eligio.
 
 **Realización:**
 
