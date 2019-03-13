@@ -52,9 +52,6 @@ En este espacio se detallaran cada una de las pruebas que comprenden cada uno de
 ![](Images/experimentoRendijas/representacionLacer.jpg)
 
 
- ![](Images/experimentoRendijas/representacionPapel.jpg)
-
-
 **Proceso con papel aluminio:**
 
 
@@ -76,6 +73,9 @@ En este espacio se detallaran cada una de las pruebas que comprenden cada uno de
 **Proceso con papel:**
 
 
+![](Images/experimentoRendijas/representacionPapel.jpg)
+ 
+ 
 ![](Images/experimentoRendijas/RepresentacionLacerPapel1.jpg)
 
 
