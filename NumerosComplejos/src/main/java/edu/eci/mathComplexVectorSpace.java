@@ -92,6 +92,9 @@ public class mathComplexVectorSpace {
         
     }
     
+    
+    
+    
     public static boolean IsHermitian(MatrizFilasColumnas matriz1){
         if (matriz1.sizeFilas == matriz1.sizeColumnas){
             MatrizFilasColumnas matrizN = new MatrizFilasColumnas(matriz1.sizeFilas, matriz1.sizeColumnas);

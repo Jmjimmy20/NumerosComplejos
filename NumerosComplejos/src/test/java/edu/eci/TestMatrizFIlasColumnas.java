@@ -358,4 +358,31 @@ public class TestMatrizFIlasColumnas {
         assertEquals(flagEsperada, flag);
     }
     
+    
+    @Test
+    public void PruebaValorMedio(){
+        boolean flag;
+        boolean flagEsperada = true;
+        double valorEsperado = 2.5;
+        double raizDosSobreDos = Math.sqrt(2)/2;
+        MatrizFilasColumnas matriz = new MatrizFilasColumnas(2, 2);
+        matriz.AddInPosition(0, 0, new ComplexNumber(1, 0));
+        matriz.AddInPosition(0, 1, new ComplexNumber(0, -1));
+        matriz.AddInPosition(1, 0, new ComplexNumber(0, 1));
+        matriz.AddInPosition(1, 1, new ComplexNumber(2, 0));
+        ComplexVectorSpace vector = new ComplexVectorSpace(2);
+        vector.AddValue(new ComplexNumber(raizDosSobreDos, 0));
+        vector.AddValue(new ComplexNumber(0,raizDosSobreDos));
+        double valorRespuesta = mathMatriz.ValorMedio(matriz, vector);
+        System.out.println("hola "+valorRespuesta);
+        if (valorRespuesta == valorEsperado){
+            flag = true;
+        }
+        else{
+            flag = false;
+        }
+        assertEquals(flagEsperada, flag);
+    }
+    
+    
 }

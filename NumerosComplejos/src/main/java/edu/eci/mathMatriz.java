@@ -109,6 +109,25 @@ public class mathMatriz {
         return  vectorN;
     }
     
+    
+    
+    public static ComplexVectorSpace MultiplicacionMatrizVector(MatrizFilasColumnas matriz, ComplexVectorSpace vector){
+        ComplexVectorSpace vectorN = new ComplexVectorSpace(matriz.sizeFilas);
+        ComplexNumber complejoN;
+        ComplexNumber complejoSuma;
+        for(int i = 0; i < matriz.sizeFilas; i++){
+            complejoSuma = new ComplexNumber(0, 0);
+            for(int o = 0; o < matriz.sizeColumnas; o++){
+                complejoN = mathComplex.ProductoComplejos(vector.GetPosition(o), matriz.GetPosition(i, o));
+                complejoSuma = mathComplex.SumaComplejos(complejoN, complejoSuma);
+            }
+            vectorN.AddValue(complejoSuma);
+        }
+        return  vectorN;
+    }
+    
+    
+    
     public static VectorFilasColumna MultiplicacionMatrizVectorConMovimiento(MatrizFilasColumnas matriz, VectorFilasColumna vector, int movimientos){
         VectorFilasColumna vectorN = new VectorFilasColumna(matriz.sizeFilas);
         MatrizFilasColumnas matrizActual = matriz; 
@@ -174,7 +193,16 @@ public class mathMatriz {
     }
     
     
+    public static double ValorMedio(MatrizFilasColumnas matriz, ComplexVectorSpace ket){
+        ComplexVectorSpace vectorResultante = MultiplicacionMatrizVector(matriz, ket);
+        ComplexVectorSpace bra = mathComplexVectorSpace.BraVector(vectorResultante);
+        return mathComplexVectorSpace.InnerProduct(bra, ket).GetReal();
+    }
     
     
+    
+    
+    
+    //para el ejercicio de 4.3 usar matriz trivialmente hermitian que es que la diagonal es la que tiene los valores y el resto de valores seran iguales a cero
     
 }
