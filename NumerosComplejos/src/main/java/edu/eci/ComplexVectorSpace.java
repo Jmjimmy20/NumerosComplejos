@@ -55,5 +55,13 @@ public class ComplexVectorSpace {
         return listaN;
     }
     
+    public ComplexVectorSpace Conjugado(){
+        ComplexVectorSpace retorno = new ComplexVectorSpace(size);
+        for (ComplexNumber c : ListVector){
+            retorno.AddValue(c.Conjugado());
+        }
+        return retorno;
+    }
+    
     
 }

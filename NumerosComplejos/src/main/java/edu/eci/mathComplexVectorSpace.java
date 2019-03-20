@@ -135,22 +135,18 @@ public class mathComplexVectorSpace {
     }
     
     
-//    public static ComplexVectorSpace BraVector(ComplexVectorSpace ket){
-//        return AdjuntaVector(ket);
-//    }
+    public static ComplexVectorSpace BraVector(ComplexVectorSpace ket){
+        return AdjuntaVector(ket);
+    }
     
     
-//    public static ComplexVectorSpace AdjuntaVector(ComplexVectorSpace vector){
-//        return conjugadaVector(transpuestaVector(vector));
-//    }
-//
-//    private static ComplexVectorSpace transpuestaVector(ComplexVectorSpace vector) {
-//
-//    }
-//    
-//    public ComplexVectorSpace conjugadaVector(ComplexVectorSpace vector) {
-// 
-//    }
+    public static ComplexVectorSpace AdjuntaVector(ComplexVectorSpace vector){
+        return conjugadaVector(vector);
+    }
+    
+    public static ComplexVectorSpace conjugadaVector(ComplexVectorSpace vector) {
+        return vector.Conjugado();
+    }
     
     
     public static ComplexNumber AmplitudTransicion(ComplexVectorSpace ket1, ComplexVectorSpace ket2){
