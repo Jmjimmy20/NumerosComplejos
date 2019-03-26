@@ -197,7 +197,6 @@ public class mathMatriz {
         if (mathComplexVectorSpace.IsHermitian(matriz)){
             ComplexVectorSpace vectorResultante = MultiplicacionMatrizVector(matriz, ket);
             ComplexVectorSpace bra = mathComplexVectorSpace.BraVector(vectorResultante);
-            //Asta aqui la respuesta va como debe ir
             return mathComplexVectorSpace.ScalarProduct(bra, ket).GetReal();
         }
         else{

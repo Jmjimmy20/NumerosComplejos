@@ -98,7 +98,6 @@ public class mathComplexVectorSpace {
     public static ComplexNumber ScalarProduct(ComplexVectorSpace vector1, ComplexVectorSpace vector2){
         ComplexNumber n = new ComplexNumber(0,0);
         for(int i = 0; i < vector1.GetSize(); i++){
-            System.out.println("Estos seran los imaginarios a multiplicar"+ vector1.GetPosition(i).Conjugado().Getimaginario() +" " + vector2.GetPosition(i).Getimaginario());
             ComplexNumber ComplejoN = mathComplex.ProductoComplejos(vector1.GetPosition(i), vector2.GetPosition(i));
             
             n = mathComplex.SumaComplejos(n, ComplejoN);
