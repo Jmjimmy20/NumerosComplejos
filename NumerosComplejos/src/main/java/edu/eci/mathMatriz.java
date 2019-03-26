@@ -118,7 +118,7 @@ public class mathMatriz {
         for(int i = 0; i < matriz.sizeFilas; i++){
             complejoSuma = new ComplexNumber(0, 0);
             for(int o = 0; o < matriz.sizeColumnas; o++){
-                complejoN = mathComplex.ProductoComplejos(vector.GetPosition(o), matriz.GetPosition(i, o));
+                complejoN = mathComplex.ProductoComplejos(matriz.GetPosition(i, o),vector.GetPosition(o));
                 complejoSuma = mathComplex.SumaComplejos(complejoN, complejoSuma);
             }
             vectorN.AddValue(complejoSuma);
@@ -194,9 +194,18 @@ public class mathMatriz {
     
     
     public static double ValorMedio(MatrizFilasColumnas matriz, ComplexVectorSpace ket){
-        ComplexVectorSpace vectorResultante = MultiplicacionMatrizVector(matriz, ket);
-        ComplexVectorSpace bra = mathComplexVectorSpace.BraVector(vectorResultante);
-        return mathComplexVectorSpace.InnerProduct(bra, ket).GetReal();
+        if (mathComplexVectorSpace.IsHermitian(matriz)){
+            ComplexVectorSpace vectorResultante = MultiplicacionMatrizVector(matriz, ket);
+            ComplexVectorSpace bra = mathComplexVectorSpace.BraVector(vectorResultante);
+            //Asta aqui la respuesta va como debe ir
+            return mathComplexVectorSpace.ScalarProduct(bra, ket).GetReal();
+        }
+        else{
+            System.out.println("La matriz dada no es hermitiana el valor a retornar es cero pero no tiene"
+                    + "que ver con la respuesta real.");
+            return 0;
+        }
+        
     }
     
     

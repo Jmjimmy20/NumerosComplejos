@@ -59,6 +59,7 @@ public class ComplexVectorSpace {
         ComplexVectorSpace retorno = new ComplexVectorSpace(size);
         for (ComplexNumber c : ListVector){
             retorno.AddValue(c.Conjugado());
+                      
         }
         return retorno;
     }
