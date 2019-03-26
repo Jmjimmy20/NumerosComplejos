@@ -360,7 +360,7 @@ public class TestMatrizFIlasColumnas {
     
     
     @Test
-    public void PruebaValorMedio(){
+    public void PruebaValorMedioVarianza(){
         boolean flag;
         boolean flagEsperada = true;
         double valorEsperado = 2.5;
@@ -373,10 +373,20 @@ public class TestMatrizFIlasColumnas {
         ComplexVectorSpace vector = new ComplexVectorSpace(2);
         vector.AddValue(new ComplexNumber(raizDosSobreDos, 0));
         vector.AddValue(new ComplexNumber(0,raizDosSobreDos));
-        double valorRespuesta = mathMatriz.ValorMedio(matriz, vector);
-        System.out.println("hola "+valorRespuesta);
-        if (valorRespuesta == valorEsperado){
+        double valorMedio = mathMatriz.ValorMedio(matriz, vector);
+        System.out.println("Valor medio: "+valorMedio);
+        if (valorMedio == valorEsperado){
+            MatrizFilasColumnas matrizMedio= new MatrizFilasColumnas(matriz.sizeFilas, matriz.sizeColumnas);
+            matrizMedio.AddInPosition(0, 0, new ComplexNumber(valorMedio, 0));
+            matrizMedio.AddInPosition(0, 1, new ComplexNumber(0, 0));
+            matrizMedio.AddInPosition(1, 0, new ComplexNumber(0, 0));
+            matrizMedio.AddInPosition(1, 1, new ComplexNumber(valorMedio, 0));
+            MatrizFilasColumnas matrizRestada = mathMatriz.RestaMatricial(matriz, matrizMedio);
+            MatrizFilasColumnas matrizCuadrada = mathMatriz.multiplicacionMatricial(matrizRestada, matrizRestada);
+            double valorVarianza = mathMatriz.Varianza(matrizCuadrada, vector);
+            System.out.println("valor Varianza = " + valorVarianza);
             flag = true;
+            
         }
         else{
             flag = false;

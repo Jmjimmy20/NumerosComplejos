@@ -36,6 +36,26 @@ public class mathMatriz {
         
     }
     
+    public static MatrizFilasColumnas RestaMatricial(MatrizFilasColumnas matriz1, MatrizFilasColumnas matriz2){
+        if ((matriz1.sizeFilas == matriz2.sizeFilas) && (matriz1.sizeColumnas == matriz2.sizeColumnas)){
+            ComplexNumber complejoN; 
+            MatrizFilasColumnas matrizN = new MatrizFilasColumnas(matriz1.sizeFilas, matriz1.sizeColumnas);
+            for(int i = 0; i < matriz1.sizeFilas; i ++){
+                for(int o = 0; o < matriz1.sizeColumnas; o ++){
+                    complejoN = mathComplex.RestaComplejos(matriz1.GetPosition(i, o), matriz2.GetPosition(i, o));
+                    matrizN.AddInPosition(i, o, complejoN);
+                }
+            }
+            return matrizN;
+        }
+        else{
+            System.out.println("Las matrices no son del mismo tamanio, la operacion entregara un valor null");
+            return null;
+        }
+        
+    }
+    
+    
     
     public static MatrizFilasColumnas MultiplicacionScalarMatriz(MatrizFilasColumnas matriz1, ComplexNumber complejo1){
         ComplexNumber complejoN; 
@@ -93,6 +113,9 @@ public class mathMatriz {
         }
         return  vectorN;
     }
+    
+    
+    
     
     public static VectorFilasColumna MultiplicacionMatrizVector(MatrizFilasColumnas matriz, VectorFilasColumna vector){
         VectorFilasColumna vectorN = new VectorFilasColumna(matriz.sizeFilas);
@@ -167,6 +190,15 @@ public class mathMatriz {
             contadorFilas += matriz2.sizeFilas;
         }
         return matrizN;
+    }
+    
+    
+    public static double Varianza(MatrizFilasColumnas matriz, ComplexVectorSpace ket){
+        double varianza = 0;
+        for(int i = 0; i < matriz.sizeFilas; i++){
+            varianza += ket.GetPosition(i).Modulus() * matriz.GetPosition(i, i).GetReal();
+        }
+        return varianza;
     }
     
     private static void AnadirPosicion(ComplexNumber valor1, int Contadorfilas, int contadorColumna, MatrizFilasColumnas matrizN, MatrizFilasColumnas matriz2){

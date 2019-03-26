@@ -55,7 +55,6 @@ public class mathComplex {
         double imaginarioNuevo = valorImaginario1-valorImaginario2;
         imaginarioNuevo = Math.round(imaginarioNuevo * 100) / 100d;
         numeroCNuevo = new ComplexNumber(realNuevo, imaginarioNuevo);
-        System.out.println("El resultado de la resta es: " + realNuevo + "+(" + imaginarioNuevo + ")i");
         return numeroCNuevo;
     }
     
