@@ -37,6 +37,12 @@ En este espacio se detallaran cada una de las pruebas que comprenden cada uno de
 **Experimento cuantico**	
 1. **Probabilidad de punto y paso entre kets**
 ![](Images/Imagen5.PNG) 
+
+
+2. **Calcular el valor medio y la varianza de un observable y un ket**
+	
+![](Images/Imagen6.PNG) 	
+	
 	
 # **Experimentos**
 
