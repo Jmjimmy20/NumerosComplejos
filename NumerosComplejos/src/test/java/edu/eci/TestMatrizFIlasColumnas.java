@@ -1,6 +1,8 @@
 package edu.eci;
 
 
+import java.util.ArrayList;
+import java.util.List;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
@@ -390,6 +392,37 @@ public class TestMatrizFIlasColumnas {
         }
         else{
             flag = false;
+        }
+        assertEquals(flagEsperada, flag);
+    }
+    
+    
+    @Test
+    public void PruebaEjercicio4(){
+        boolean flag = true;
+        boolean flagEsperada = true;
+        //double valorEsperado = 2.5;
+        ArrayList vectorMatrices = new ArrayList<MatrizFilasColumnas>();
+        double raizDosSobreDos = Math.sqrt(2)/2;
+        MatrizFilasColumnas matriz1 = new MatrizFilasColumnas(2, 2);
+        matriz1.AddInPosition(0, 0, new ComplexNumber(0, 0));
+        matriz1.AddInPosition(0, 1, new ComplexNumber(1, 0));
+        matriz1.AddInPosition(1, 0, new ComplexNumber(1, 0));
+        matriz1.AddInPosition(1, 1, new ComplexNumber(0, 0));
+        vectorMatrices.add(matriz1);
+        MatrizFilasColumnas matriz2 = new MatrizFilasColumnas(2, 2);
+        matriz2.AddInPosition(0, 0, new ComplexNumber(raizDosSobreDos, 0));
+        matriz2.AddInPosition(0, 1, new ComplexNumber(raizDosSobreDos, 0));
+        matriz2.AddInPosition(1, 0, new ComplexNumber(raizDosSobreDos, 0));
+        matriz2.AddInPosition(1, 1, new ComplexNumber(-raizDosSobreDos, 0));
+        vectorMatrices.add(matriz2);
+        ComplexVectorSpace vector = new ComplexVectorSpace(2);
+        vector.AddValue(new ComplexNumber(1, 0));
+        vector.AddValue(new ComplexNumber(0,0));
+        ComplexVectorSpace vectorRespuesta = mathMatriz.CalcularStateVector(vectorMatrices, vector);
+        System.out.println("vector resultante");
+        for (int i = 0; i < vectorRespuesta.size; i ++){
+            System.out.println("vector " + i + vectorRespuesta.GetPosition(i).GetReal() + " " + vectorRespuesta.GetPosition(i).Getimaginario());
         }
         assertEquals(flagEsperada, flag);
     }

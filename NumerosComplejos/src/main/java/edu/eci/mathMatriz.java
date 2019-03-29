@@ -1,5 +1,8 @@
 package edu.eci;
 
+import java.awt.List;
+import java.util.ArrayList;
+
 
 
 /*
@@ -175,6 +178,17 @@ public class mathMatriz {
         }
         return  vectorN;
     }
+    
+    
+    public static ComplexVectorSpace CalcularStateVector(ArrayList<MatrizFilasColumnas> listaMatrices, ComplexVectorSpace ket){
+        ComplexVectorSpace ketRespuesta = ket;
+        for(int i = 0; i < listaMatrices.size(); i++){
+            MatrizFilasColumnas m = listaMatrices.get(i);
+            ketRespuesta = MultiplicacionMatrizVector(m, ketRespuesta);
+        }
+        return ketRespuesta;
+    }
+    
     
     
     public static MatrizFilasColumnas ProductoTensor(MatrizFilasColumnas matriz1, MatrizFilasColumnas matriz2){
